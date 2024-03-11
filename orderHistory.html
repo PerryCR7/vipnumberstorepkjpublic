@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YR72WNHR7F");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="apple-touch-icon" href="./Assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+    <link rel="stylesheet" type="text/css" href="./Css/cart.css" />
+    <link rel="stylesheet" type="text/css" href="Css/Checkout.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/vipnumlogore.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <title>VIP Mobile Number | Fancy</title>
+    <style>
+      .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 2px solid #ccc;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        color: #555;
+      }
+
+      .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+      }
+
+      .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+      }
+
+      .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+      }
+
+      .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+      }
+
+      .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+      }
+
+      .invoice-box table tr.information table td {
+        padding-bottom: 0px;
+      }
+
+      .invoice-box table tr.heading td {
+        background: linear-gradient(
+          40deg,
+          #F9C835 20%,
+          #f9c935 51%,
+          #F9C835 90%
+        ) !important;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .invoice-box table tr.details td {
+        padding-bottom: 20px;
+      }
+
+      .invoice-box a {
+        color: #555;
+        text-decoration: none;
+      }
+
+      .numberfon p {
+        margin: 0px;
+      }
+
+      .invoice-box table tr.item td {
+        border-bottom: 1px solid #F9C835;
+      }
+
+      .invoice-box table tr.item.last td {
+        border-bottom: none;
+      }
+
+      .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+      }
+    </style>
+    <style type="text/css">
+      .backpack.dropzone {
+        font-family: "SF UI Display", "Segoe UI";
+        font-size: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 150px;
+        font-weight: lighter;
+        color: white;
+        will-change: right;
+        z-index: 2147483647;
+        bottom: 20%;
+        background: #333;
+        position: fixed;
+        user-select: none;
+        transition: left 0.5s, right 0.5s;
+        right: 0px;
+      }
+      .backpack.dropzone .animation {
+        height: 80px;
+        width: 250px;
+        background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png")
+          left center;
+      }
+      .backpack.dropzone .title::before {
+        content: "Save to";
+      }
+      .backpack.dropzone.closed {
+        right: -250px;
+      }
+      .backpack.dropzone.hover .animation {
+        animation: sxt-play-anim-hover 0.91s steps(21);
+        animation-fill-mode: forwards;
+        background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png")
+          left center;
+      }
+    </style>
+  </head>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <!--Desktop screen start-->
+    <div class="d-none d-lg-block">
+      <!--navbar start-->
+      <div id="nav-placeholder"></div>
+      <div class="container mt-3 orders">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">ORDER ID</th>
+              <th scope="col">ORDER NUMBER</th>
+              <th scope="col">ORDER PLACED</th>
+              <th scope="col">TOTAL</th>
+              <!-- <th scope="col">ORDER STATUS</th> -->
+              <th scope="col">PAYMENT STATUS</th>
+              <th scope="col">INVOICE</th>
+              <th scope="col">UPC</th>
+            </tr>
+          </thead>
+          <tbody id="orderHistoryDesk"></tbody>
+        </table>
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+      </div>
+      <div class="text-center">
+        <button
+          class="btn btn-primary load_moreDesk"
+          style="margin-bottom: 300px"
+        >
+          Load more
+        </button>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $("#nav-placeholder").load("./Template/Navbar.html");
+        });
+      </script>
+      <!--navbar end-->
+
+      <!--footer start-->
+      <div id="foot-placeholder" id="mobFoot-placeholder"></div>
+      <script>
+        $(document).ready(function () {
+          $("#foot-placeholder").load("./Template/Footer.html");
+        });
+      </script>
+      <!--footer end-->
+    </div>
+    <!--Desktop screen end-->
+    <!--Mobile screen start-->
+    <div class="d-block d-lg-none">
+      <!--Navbar start-->
+      <div id="mobNav-placeholder"></div>
+      <div class="container mt-3 ordersMob mb-5" style="overflow-x: scroll">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">ORDER ID</th>
+              <th scope="col">ORDER NUMBER</th>
+              <th scope="col">ORDER PLACED</th>
+              <th scope="col">TOTAL</th>
+              <!-- <th scope="col">ORDER STATUS</th> -->
+              <th scope="col">PAYMENT STATUS</th>
+              <th scope="col">INVOICE</th>
+              <th scope="col">UPC</th>
+            </tr>
+          </thead>
+          <tbody id="orderHistoryMob"></tbody>
+        </table>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary load_moreMob mt-3">Load more</button>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $("#mobNav-placeholder").load("./Template/MobileNav.html");
+        });
+      </script>
+      <!--Navbar end-->
+      <div id="mobFoot-placeholder" class="margin-top-on-scroll-js"></div>
+      <script>
+        $(document).ready(function () {
+          $("#mobFoot-placeholder").load("./Template/MobileFooter.html");
+        });
+      </script>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">UPC</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Mobile scrren end-->
+
+    <!---scripts-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./Js/cart.js" type="module"></script>
+    <script src="Js/html2pdf.bundle.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+    <!--script for cart desktop-->
+
+    <script>
+      let address = "";
+      let state = "";
+      let pincode = "";
+      let customer_name = "";
+      let customer_id;
+      let count = 0;
+      let totalData = 0;
+      let ifMob = screen.width > 700 ? "Desk" : "Mob";
+      var myHeaders = new Headers();
+      myHeaders.append("token", localStorage.getItem("user"));
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.status == "success") {
+            fetchOrdersHistory(result.data.customer_id, count, true);
+            customer_id = result.data.customer_id;
+            address = result.data.address;
+            state = result.data.state;
+            pincode = result.data.pincode;
+            customer_name = result.data.customer_name;
+          }
+        })
+        .catch((error) => console.log("error", error));
+
+      function fetchOrdersHistory(id, count, initial_call) {
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+
+        var raw = "";
+
+        var requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          redirect: "follow",
+        };
+        let totalCalls = 0;
+        if (totalData > 20) {
+          totalCalls = totalData / 20;
+          totalCalls = Math.ceil(totalCalls);
+        }
+        if (count < totalCalls || initial_call) {
+          fetch(
+            `https://vipnumberapi.bigboychoice.com/api/v1/customer/fetch_all_order/${
+              count + 1
+            }?customer_id=` + id,
+            requestOptions
+          )
+            // <td>${result.data[i].order_status}</td>
+            .then((response) => response.json())
+            .then((result) => {
+              if (result.status == "success") {
+                if (totalCalls - count == 1) {
+                  $(".load_more" + ifMob).hide();
+                }
+                totalData = result.total_data;
+                for (let i = 0; i < result.data.length; i++) {
+                  var d = "<td></td>";
+                  if (
+                    result.data[i].payment_status == "Order Placed" ||
+                    result.data[i].payment_status == "Order Confirmed"
+                  ) {
+                    d =
+                      `<td><i style="cursor:pointer;" onclick='downloadInvoice(` +
+                      result.data[i].order_no +
+                      "," +
+                      result.data[i].order_total +
+                      `)' class="fa-solid fa-file-invoice"></i></td>`;
+                  }
+                  // console.log("d",d)
+                  let dateSplit = result.data[i].createdAt.split("T");
+                  let splitDate = dateSplit[0]
+                    .split("-")
+                    .reverse()
+                    .map((item, index) => {
+                      return item;
+                    });
+                  let dateUpdate = "";
+                  splitDate.map((item, index) => {
+                    if (index != 2) dateUpdate += item + "-";
+                    else dateUpdate += item;
+                  });
+
+                  $("#orderHistory" + ifMob).html(
+                    $("#orderHistory" + ifMob).html() +
+                      `
+                <tr>
+                  <th scope="row">${result.data[i].order_id}</th>
+                  <td>${result.data[i].purchase_details.map((item) => {
+                    return item.number;
+                  })}</td>
+                  <td> ${dateUpdate}
+                  </td>
+                  <td>${result.data[i].order_total}</td>
+                  <td>${result.data[i].payment_status}</td>
+                 ${d}
+                 ${
+                   result.data[i].payment_status == "Order Confirmed"
+                     ? `<td><i data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer;" onclick="upc(${result.data[i].order_no})" class="fa-solid fa-eye"></i></td>`
+                     : `<td></td>`
+                 }
+                </tr>`
+                  );
+                }
+              } else {
+                $(".load_more" + ifMob).hide();
+                $(".notifications" + ifMob).html(
+                  "<h1 class='text-center'>No notifications!</h1>"
+                );
+              }
+            })
+            .catch((error) => console.log("error", error));
+        }
+      }
+      let downloadInvoice = (id, total) => {
+        // console.log(id,total)
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+
+        var requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          redirect: "follow",
+        };
+        let tables = "";
+        fetch(
+          "https://vipnumberapi.bigboychoice.com/api/v1/customer/fetch_single_order/?order_no=" +
+            id,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.status == "success") {
+              let tablesOfNumbers = result.data.purchase_details;
+              for (let i = 0; i < tablesOfNumbers.length; i++) {
+                tables =
+                  tables +
+                  `
+                <tr>
+                  <td>${i + 1}</td>
+                  <td style="text-align: left">${tablesOfNumbers[i].number}</td>
+                  <td>${tablesOfNumbers[i].total}</td>
+                  <td>&nbsp;</td>
+                  <td>${tablesOfNumbers[i].total}</td>
+                </tr>
+                `;
+              }
+
+              let invoice = `<div class="invoice-box">
+                      <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr class="top">
+                            <td colspan="5">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <img
+                                        src="Assets/BBC-LOGO.svg"
+                                        style="width: 35%; max-width: 300px"
+                                      />
+                                    </td>
+
+                                    <td>
+                                      <strong>Invoice Date:</strong> 15/10/2019<br />
+
+                                      <strong>Invoice No #: INV-0003</strong><br />
+                                      <strong>Order ID:</strong> ${id}<br />
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <tr class="information">
+                            <td colspan="5">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      From<br />
+                                      <strong>Vip Number Club</strong><br />
+                                      Kalra Marketing Gol Bazar,<br />
+                                      Near Police Chowky,<br />
+                                      Mandi dabwali Distt. sirsa
+                                      State - Haryana Pincode - 125104
+                                    </td>
+
+                                    <td width="50%">
+                                      Bill To<br />
+                                      <strong>${customer_name}</strong><br />
+                                      ${address}<br />${state}<br />${pincode}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <tr class="">
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="heading">
+                            <td><strong>S.No</strong></td>
+                            <td align="left" style="text-align: left">
+                              <strong>Item &amp; Description</strong>
+                            </td>
+                            <td><strong>Rate</strong></td>
+                            <td><strong> Discount</strong></td>
+                            <td><strong>Subtotal</strong></td>
+                          </tr>
+
+                        ${tables}
+
+                          <tr class="information">
+                            <td colspan="5">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="38%">&nbsp;</td>
+                                    <td width="4%">&nbsp;</td>
+                                    <td width="26%">&nbsp;</td>
+                                    <td width="4%">&nbsp;</td>
+                                    <td width="28%">
+                                      <table
+                                        width="80%"
+                                        border="0"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                      >
+                                        <tbody>
+                                          <tr class="item">
+                                            <td>
+                                              <strong>Subtotal: </strong>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>Rs. ${total}</td>
+                                          </tr>
+
+                                          <tr class="item">
+                                            <td>
+                                              <strong>Total:</strong>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>Rs. ${total}</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5" align="center">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5" align="center">
+                                      "This is system generated invoice and do not require
+                                      any stamp or signature"
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>`;
+              var opt = {
+                margin: 0.25,
+                filename: "invoice.pdf",
+                image: { type: "jpeg", quality: 1 },
+                html2canvas: {
+                  dpi: 192,
+                  scale: 4,
+                  letterRendering: true,
+                  useCORS: true,
+                },
+                jsPDF: {
+                  unit: "in",
+                  format: "letter",
+                  orientation: "portrait",
+                },
+              };
+              html2pdf().from(invoice).set(opt).save();
+            }
+          })
+          .catch((error) => console.log("error", error));
+      };
+
+      function upc(id) {
+        $(".modal-body").html("");
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+        var requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          redirect: "follow",
+        };
+
+        fetch(
+          "https://vipnumberapi.bigboychoice.com/api/v1/customer/fetch_single_order/?order_no=" +
+            id,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.status == "success") {
+              for (let i = 0; i < result.data.purchase_details.length; i++) {
+                $(".modal-body").html(
+                  $(".modal-body").html() +
+                    `<p>${result.data.purchase_details[i].upc_no}</p> <hr />`
+                );
+              }
+            }
+          })
+          .catch((error) => console.log("error", error));
+      }
+      $(".load_more" + ifMob).click(() => {
+        count += 1;
+        fetchOrdersHistory(customer_id, count, false);
+      });
+    </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      let main = document.querySelector(".margin-top-on-scroll-js");
+      if (window.pageYOffset == 0) {
+        document
+          .querySelector(".margin-top-on-scroll-js")
+          .classList.remove("margin-top-on-scroll");
+      }
+      if (window.pageYOffset > 0) {
+        document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+      }
+    });
+  </script></body>
+</html>

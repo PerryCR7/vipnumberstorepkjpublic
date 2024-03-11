@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --font: "Roboto", sans-serif;
+}
+table {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+thead tr {
+  background: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  color: #fafafa;
+  font-family: var(--font);
+}
+tbody td,
+.cart-total td {
+  font-family: var(--font);
+}
+tbody th .fa-solid {
+  color: #616161;
+}
+.cart-total h1 {
+  text-transform: uppercase;
+  font-family: var(--font);
+  color: #F9C835;
+  font-size: 1.7rem;
+}
+.btn-primary {
+  background: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  border-color: #F9C835 !important;
+}
+.btn {
+  text-transform: capitalize;
+  font-family: var(--font);
+}
+
+.payment-option-img{
+  width: 60%;
+}
+.payment-option-img-laptop{
+  width: 65%;
+}
+.payment-option-img-laptop-2{
+  width: 40%;
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+@media screen and (max-width:500px){
+  .payment-option-img{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width:1000px){
+  .payment-option-img-laptop{
+    width: 50%;
+  }
+}
+@media screen and (min-width:1200px){
+  .payment-option-img-laptop{
+    width: 40%;
+  }
+}

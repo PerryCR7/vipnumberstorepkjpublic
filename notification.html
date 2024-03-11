@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YR72WNHR7F");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="apple-touch-icon" href="./Assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+    <link rel="stylesheet" type="text/css" href="./Css/cart.css" />
+    <link rel="stylesheet" type="text/css" href="Css/Checkout.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/vipnumlogore.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <title>VIP Mobile Number | Fancy</title>
+  </head>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <!--Desktop screen start-->
+    <div class="d-none d-lg-block">
+      <!--navbar start-->
+      <div id="nav-placeholder"></div>
+      <div class="container mt-3 notifications"></div>
+      <div class="text-center">
+        <button class="btn btn-primary load_more mt-3">Load more</button>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $("#nav-placeholder").load("./Template/Navbar.html");
+        });
+      </script>
+      <!--navbar end-->
+
+      <!--footer start-->
+      <div
+        id="foot-placeholder"
+        style="margin-top: 400px"
+        id="mobFoot-placeholder"
+      ></div>
+      <script>
+        $(document).ready(function () {
+          $("#foot-placeholder").load("./Template/Footer.html");
+        });
+      </script>
+      <!--footer end-->
+    </div>
+    <!--Desktop screen end-->
+    <!--Mobile screen start-->
+    <div class="d-block d-lg-none">
+      <!--Navbar start-->
+      <div id="mobNav-placeholder"></div>
+      <div class="container mt-3 notificationsMob"></div>
+      <div class="text-center">
+        <button class="btn btn-primary load_moreMob mt-3">Load more</button>
+      </div>
+      <script>
+        $(document).ready(function () {
+          $("#mobNav-placeholder").load("./Template/MobileNav.html");
+        });
+      </script>
+      <!--Navbar end-->
+      <div id="mobFoot-placeholder" class="margin-top-on-scroll-js" style="margin-top: 300px"></div>
+      <script>
+        $(document).ready(function () {
+          $("#mobFoot-placeholder").load("./Template/mobileFooter.html");
+        });
+      </script>
+    </div>
+
+    <!--Mobile scrren end-->
+
+    <!---scripts-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./Js/cart.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+    <!--script for cart desktop-->
+
+    <script>
+      let count = 0;
+      let customer_id;
+      var myHeaders = new Headers();
+      myHeaders.append("token", localStorage.getItem("user"));
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.status == "success") {
+            fetchAllNotifications(count, result.data.customer_id, true);
+            customer_id = result.data.customer_id;
+          }
+        })
+        .catch((error) => console.log("error", error));
+      let totalData = 0;
+      let ifMob = screen.width > 700 ? "" : "Mob";
+      function fetchAllNotifications(count, id, initial_call) {
+        var requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
+        let totalCalls = 0;
+        if (totalData > 20) {
+          totalCalls = totalData / 20;
+          totalCalls = Math.ceil(totalCalls);
+          console.log(totalCalls);
+        }
+        if (count < totalCalls || initial_call) {
+          fetch(
+            `https://vipnumberapi.bigboychoice.com/api/v1/customer/fetch_notifications/${
+              count + 1
+            }?customer_id=${id}`,
+            requestOptions
+          )
+            .then((response) => response.json())
+            .then((result) => {
+              if (result.status == "success") {
+                if (totalCalls - count == 1) {
+                  $(".load_more" + ifMob).hide();
+                }
+                totalData = result.total_data;
+                for (let i = 0; i < result.data.length; i++) {
+                  $(".notifications" + ifMob).html(
+                    $(".notifications" + ifMob).html() +
+                      ` <div
+                        style="
+                        border: 1px solid lightgrey;
+                        min-height: 70px;
+                        display: flex;
+                        justify-content: start;
+                        padding: 20px;
+                        align-items: center;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                        "
+                    >
+                        <h6 style="color: rgb(139, 139, 139)">${result.data[i].message}</h6>
+                    </div>`
+                  );
+                }
+              } else {
+                $(".load_more" + ifMob).hide();
+                $(".notifications" + ifMob).html(
+                  "<h1 class='text-center'>No notifications!</h1>"
+                );
+              }
+            })
+            .catch((error) => console.log("error", error));
+        } else alert("sorry no more calls");
+      }
+
+      $(".load_more" + ifMob).click(() => {
+        count += 1;
+        fetchAllNotifications(count, customer_id, false);
+      });
+    </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      let main = document.querySelector(".margin-top-on-scroll-js");
+      if (window.pageYOffset == 0) {
+        document
+          .querySelector(".margin-top-on-scroll-js")
+          .classList.remove("margin-top-on-scroll");
+      }
+      if (window.pageYOffset > 0) {
+        document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+      }
+    });
+  </script></body>
+</html>

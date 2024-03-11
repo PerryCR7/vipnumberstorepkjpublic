@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-YR72WNHR7F");
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1" />
+  <link rel="apple-touch-icon" href="./Assets/logo.png" />
+  <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+  <link rel="stylesheet" type="text/css" href="./Css/cart.css" />
+  <link rel="stylesheet" type="text/css" href="Css/Checkout.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="./Assets/vipnumlogore.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+  <title>VIP Mobile Number | Fancy</title>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+  <!--Desktop screen start-->
+  <div class="d-none d-lg-block">
+    <!--navbar start-->
+    <div id="nav-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("./Template/Navbar.html");
+      });
+    </script>
+    <!--navbar end-->
+    <section>
+      <div class="container">
+        <div class="carousel-inner">
+          <div >
+            <!---Banner 1 start-->
+            <div class="Banner" style="height: auto !important;">
+              <div style="background-color: #fff !important;" class="container">
+                <div class="row align-items-center">
+                  <div class="col-xl-7 col-lg-7" style="padding-left:0; padding-right:0;">
+                    <div class="banner-left" style="display: flex;align-items: center;justify-content: space-between;">
+                      <img style="width: 13.5rem;" src="./Assets/Rangoli.PNG" alt="welcome" />
+                      <div style="margin-left: 4.5rem;">
+                      <span style="color: #F9C835;font-size: 1.5rem;font-weight: 600;">Select payment Modes</span><br>
+                      <span style="color: #000;font-size: 3.5rem;font-weight: 600;text-align: center;display: block;">Checkout</span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---Banner 1 end-->
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <!-- <h1 class="cart-heading">Checkout Page</h1> -->
+          <div class="cart-details-cont detail placeOrder">
+            <table class="table table-bordered">
+              <thead>
+                <tr style="color: #000;">
+                  <th scope="col"></th>
+                  <th scope="col">NUMBER</th>
+                  <th scope="col">PRICE</th>
+                  <th scope="col">TOTAL</th>
+                </tr>
+              </thead>
+              <tbody class="cart-data"></tbody>
+            </table>
+
+            <!-- <div class="checkoutForm mb-5">
+                <div class="row g-3 p-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your name"
+                      aria-label="Your name"
+                      id="name"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your email"
+                      aria-label="Your email"
+                      id="email"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Your number"
+                      aria-label="Your number"
+                      id="number"
+                    />
+                  </div>
+                </div>
+              </div> -->
+            <!-- <div class="cart-total d-flex flex-column">
+              <h1 class="text-center">Your Total Amount is :-</h1>
+              <h1 style="color: #000" class="total"></h1>
+            </div> -->
+            <!-- <div class="cart-total d-flex flex-column">
+              <h1 class="text-center">Payment Method</h1>
+              <select name="pay_type" id="pay_type">
+                <option default value="Paytm">Paytm</option>
+                <option default value="CashFree">CashFree</option>
+                <option value="Razorpay">Razorpay</option>
+              </select>
+              var checkedValue = document.querySelector('.pay_type:checked').value;
+            </div> -->.
+            <!-- <div class="cart-total d-flex flex-column" style="
+                  align-items: center;
+                  margin: 0 auto;
+                  width: 80% !important; ;
+                ">
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="tabletop">
+                    <th width="7%" class="product-remove gradiyant"></th>
+                    <th width="43%" class="product-name gradiyant" style="
+                          font-size: 23px;
+                          text-align: left;
+                          padding: 2px 10px !important;
+                        ">
+                      Payment
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="cart-item">
+                    <td class="product-remove">
+                      <input type="radio" name="pay_type" class="pay_type" value="Paytm" checked="" style="
+                            margin-right: 10px;
+                            border: 1px solid rgb(204, 204, 204);
+                          " />
+                    </td>
+                    <td class="product-name" style="font-size: 20px; text-align: left">
+                      <b style="font-size: 20px">Paytm, Google Pay, UPI, PhonePe</b>
+                    </td>
+                  </tr> -->
+                  <!-- <tr class="cart-item" style="margin: 10px">
+                      <td class="product-remove">
+                        <input
+                          type="radio"
+                          name="pay_type"
+                          class="pay_type"
+                          value="CashFree"
+                          style="
+                            margin-right: 10px;
+                            border: 1px solid rgb(204, 204, 204);
+                          "
+                        />
+                      </td>
+                      <td
+                        class="product-name"
+                        style="font-size: 20px; text-align: left"
+                      >
+                        <b
+                          >Debit Card, Credit Card, Net Banking, Mobikwik,
+                          PayZapp, Airtel Money, Freecharge, JioMoney</b
+                        >
+                      </td>
+                    </tr> -->
+                  <!-- <tr class="cart-item" style="margin: 10px">
+                    <td class="product-remove">
+                      <input type="radio" name="pay_type" class="pay_type" value="PayU" style="
+                            margin-right: 10px;
+                            border: 1px solid rgb(204, 204, 204);
+                          " />
+                    </td>
+                    <td class="product-name" style="font-size: 20px; text-align: left">
+                      <b>All Type Of Payment</b>
+                    </td>
+                  </tr> -->
+                  <!-- <tr class="cart-item" style="margin: 10px;">
+                    <td class="product-remove">
+                      <input type="radio" name="pay_type" class="pay_type" value="Razorpay"
+                        style="margin-right: 10px; border: 1px solid rgb(204, 204, 204);">
+                    </td>
+                    <td class="product-name" style="font-size: 20px;">
+                      <b>RazorPay</b>
+                    </td>
+                  </tr> -->
+                  <!-- <tr>
+                    <td colspan="5" class="actions text-right clear"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+
+            <div>
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type" class="pay_type" value="Paytm" checked="" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem;font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">PayTm,Gpay,PhonePe & All UPI</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-img-2-100 payment-option-img-laptop-2" alt="" src="./Assets/payment-1.png" >
+                    </div>
+                  </div>
+                  <div style="background-color: #fff;padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-2" alt="" src="./Assets/paytm-1.jpg" >
+                  </div>
+                </div>
+              </div>
+              
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type" class="pay_type" value="PayU" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem;font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">Debit Card,Credit Card,Net Banking,Mobikwik,PayZapp,Airtel Money,Freechange,Jio Money,Amazon Pay</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-img-2-100 payment-option-img-laptop-2" alt="" src="./Assets/payment-net-banking.jpg" >
+                    </div>
+                  </div>
+                  <div class="laptop-1400" style="background-color: #fff; padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-3" alt="" src="./Assets/razorpay.png" >
+                  </div>
+                </div>
+              </div>
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type" class="pay_type" value="PayU" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem; font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">All Payment Methods Available</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-option-img-laptop-2 payment-img-2-100" alt="" src="./Assets/payment-option-1.png" >
+                    </div>
+                  </div>
+                  <div style="background-color: #fff;padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-2" alt="" src="./Assets/PayU.svg.png" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="couponBox d-none">
+              <div class="input-group mb-3" style="width: 400px">
+                <input type="text" class="form-control coupon" placeholder="Enter coupon name" />
+                <span><button class="btn btn-primary coupon_btn">
+                    Apply
+                  </button></span>
+              </div>
+              <p class="removeCoupon d-none" onclick="location.reload()" style="
+                    font-size: 14px;
+                    color: purple;
+                    margin-top: 30px;
+                    cursor: pointer;
+                  ">
+                Remove Coupon ❌
+              </p>
+            </div>
+
+            <button class="btn btn-primary mt-4 place_btn" style="color: #000;">
+              Make Payment
+            </button>
+
+            <div class="d-flex flex-column mt-3" style="text-align: center;">
+              <p>Note: Your payment is secured with 100% return guranteed. For information about our <a
+                  style="background-color: #fff !important;padding:0 !important; color: blue !important;"
+                  href="./Terms.html">tarms & conditions.</a></p>
+              <img class="payment-option-img-laptop" src="./Assets/payment-option-1.png" style="height: auto;margin:auto;" />
+            </div>
+            <p style="
+                  font-size: 14px;
+                  color: purple;
+                  margin-top: 30px;
+                  cursor: pointer;
+                " id="applyCoupon">
+              🏷️ Apply Coupon
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--footer start-->
+    <div id="foot-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#foot-placeholder").load("./Template/Footer.html");
+      });
+    </script>
+    <!--footer end-->
+  </div>
+  <!--Desktop screen end-->
+  <!--Mobile screen start-->
+  <div class="d-block d-lg-none">
+    <!--Navbar start-->
+    <div id="mobNav-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#mobNav-placeholder").load("./Template/MobileNav.html");
+      });
+    </script>
+    <!--Navbar end-->
+    <section class="container margin-top-on-scroll-js" style="padding-left: 0px;padding-right: 0px;">
+      <div class="carousel-inner">
+        <div >
+          <!---Banner 1 start-->
+          <div class="Banner" style="height: auto !important;">
+            <div style="background-color: #fff !important;" class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-7 col-lg-7" style="padding-left:0; padding-right:0;">
+                  <div class="banner-left" style="display: flex;align-items: center;">
+                    <img style="width: 148px;" src="./Assets/Rangoli.PNG" alt="welcome" />
+                    <div style="margin-left: 1.5rem;">
+                    <span style="color: #F9C835;font-size: 1rem;font-weight: 600;">Select payment Modes</span><br>
+                    <span style="color: #000;font-size: 1.9rem;font-weight: 600;text-align: center;display: block;">Checkout</span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---Banner 1 end-->
+        </div>
+      </div>
+      <div class="d-flex flex-column detailSm">
+        <div class="cart-details-cont placeOrderMob" style="padding: 14px">
+          <table class="table table-bordered">
+            <thead>
+              <tr style="color: #000;">
+                <th scope="col"></th>
+                <th scope="col">NUMBER</th>
+                <th scope="col">PRICE</th>
+                <th scope="col">TOTAL</th>
+              </tr>
+            </thead>
+            <tbody class="cart-data-mobile"></tbody>
+          </table>
+          <!-- <div class="checkoutForm mb-5" style="width: 80vw">
+              <div class="row g-3 p-3">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                    aria-label="Your name"
+                    id="name_mob"
+                  />
+                </div>
+              </div>
+              <div class="row g-3 p-3">
+                <div class="col">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email"
+                    aria-label="Your email"
+                    id="email_mob"
+                  />
+                </div>
+              </div>
+              <div class="row g-3 p-3">
+                <div class="col">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Your number"
+                    aria-label="Your number"
+                    id="number_mob"
+                  />
+                </div>
+              </div>
+            </div> -->
+          <div class="cart-total">
+            <!-- <h1 class="text-center" style="font-size: 1.4rem">
+              Your Total Amount is :-
+            </h1>
+            <h1 style="color: #000" class="totalSm">₹ 3700</h1> -->
+            <!-- <h1 class="text-center">Payment Method</h1>
+            <select name="pay_type_mob" id="pay_type_mob">
+              <option default value="Paytm">Paytm</option>
+              <option value="Razorpay">Razorpay</option>
+            </select> -->
+
+            <div>
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type_mob" class="pay_type_mob" value="Paytm" checked="" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem;font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">PayTm,Gpay,PhonePe & All UPI</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-img-100" alt="" src="./Assets/payment-1.png" >
+                    </div>
+                  </div>
+                  <div style="background-color: #fff;padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-2" alt="" src="./Assets/paytm-1.jpg" >
+                  </div>
+                </div>
+              </div>
+              
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type_mob" class="pay_type_mob" value="PayU" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem;font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">Debit Card,Credit Card,Net Banking,Mobikwik,PayZapp,Airtel Money,Freechange,Jio Money,Amazon Pay</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-img-100" alt="" src="./Assets/payment-net-banking.jpg" >
+                    </div>
+                  </div>
+                  <div style="background-color: #fff; padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-3" alt="" src="./Assets/razorpay.png" >
+                  </div>
+                </div>
+              </div>
+              <div style="display: grid;grid-template-columns: 15% 85%;align-items: center;margin-top: 1rem;margin-bottom: 1rem;">
+                <div>
+                  <input type="radio" name="pay_type_mob" class="pay_type_mob" value="PayU" />
+                </div>
+                <div style="display: flex;flex-direction:row;background-color: #f7f7f7;padding: 3px 6px;border-radius: 10px;">
+                  <div style="display: flex;flex-direction:column;background-color: #fff;border-right: 1px solid #ddd;border-radius: 10px 0px 0px 10px;">
+                    <div>
+                      <p class="mobile-payment-text" style="padding: .5rem; font-weight: 600; margin-bottom: 0;border-bottom: 1px solid #ddd;">All Payment Methods Available</p>
+                    </div>
+                    <div style="padding: .5rem;">
+                      <img class="payment-img-100" alt="" src="./Assets/payment-option-1.png" >
+                    </div>
+                  </div>
+                  <div style="background-color: #fff;padding-left:.5rem;padding-right:.5rem;display: flex;align-items:center;border-radius: 0px 10px 10px 0px;">
+                    <img class="payment-img-2" alt="" src="./Assets/PayU.svg.png" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="couponBox_mob d-none">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control coupon_mob" placeholder="Enter coupon name" />
+                <span><button class="btn btn-primary coupon_btn_mob">
+                    Apply
+                  </button></span>
+              </div>
+              <p class="d-none removeCouponMob" onclick="location.reload()" style="
+                    font-size: 14px;
+                    color: purple;
+                    margin-top: 30px;
+                    cursor: pointer;
+                  ">
+                Remove Coupon ❌
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-2 place_btn_mob vw90" style="color: #000;">
+            Make Payment
+          </button>
+          <p class="vw90" style=" font-size: 0.75rem;text-align: left;margin-top: 5px;">Note: Your payment is secured with 100% return
+            guranteed. For information about our <a
+              style="background-color: #fff !important;padding:0 !important; color: blue !important;"
+              href="./Terms.html">tarms & conditions.</a></p>
+          <img class="payment-option-img" src="./Assets/payment-option-1.png" />
+          <p style="
+                font-size: 14px;
+                color: purple;
+                margin-top: 30px;
+                cursor: pointer;
+              " id="applyCoupon_mob">
+            🏷️ Apply Coupon
+          </p>
+        </div>
+      </div>
+    </section>
+    <div id="mobFoot-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#mobFoot-placeholder").load("./Template/MobileFooter.html");
+      });
+    </script>
+  </div>
+
+  <!--Mobile scrren end-->
+
+  <!---scripts-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="./Js/cart.js" type="module"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
+  <!--script for cart desktop-->
+  <script>
+    let val1;
+    let ifMob = screen.width > 700 ? "" : "_mob";
+    let cartData = document.querySelectorAll(".cart-data");
+    let cartDetail = document.querySelector(".detail");
+    let total = document.querySelector(".total");
+    let cartArr = [...cartData];
+    let params = new URLSearchParams(window.location.search);
+    if (params.get("buynow")) {
+      val1 = localStorage.getItem("checkout");
+    } else val1 = localStorage.getItem("cart");
+    let arr = JSON.parse(val1);
+    if (arr == null || arr.length == 0) {
+      document.querySelector(".cart-details-cont").innerHTML =
+        "<h1 class='text-center'>Please add some items to checkout!</h1>";
+    }
+    cartArr.map((item) => {
+      arr.forEach((val) => {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="img font-1rem"></td>
+            <td>${val.number}</td>
+                    <td>${val.price}</td>
+                    <td>${val.price}</td>
+          `;
+        item.appendChild(tr);
+      });
+    });
+    let Total = arr.reduce((accumulator, Object) => {
+      return accumulator + Object.price;
+    }, 0);
+    total.innerHTML = ` ₹ ${Total}`;
+  </script>
+  <!--script for cart desktop end-->
+  <!--script for cart Mobile-->
+  <script>
+    let cartDataSm = document.querySelectorAll(".cart-data-mobile");
+    let cartDetailSm = document.querySelector(".detailSm");
+    let totalSm = document.querySelector(".totalSm");
+    let cartArrSm = [...cartDataSm];
+    let val1Sm = localStorage.getItem("cart");
+    if (params.get("buynow")) {
+      val1Sm = localStorage.getItem("checkout");
+    } else val1Sm = localStorage.getItem("cart");
+    let arrSm = JSON.parse(val1Sm);
+    if (arrSm == null || arrSm.length == 0) {
+      document.querySelector(".placeOrderMob").innerHTML =
+        "<h1 class='text-center'>Please add some items to checkout!</h1>";
+    }
+    cartArrSm.map((item) => {
+      arrSm.forEach((val) => {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
+
+                    <td class="img font-1rem"></td>
+                    <td>${val.number}</td>
+                    <td>${val.price}</td>
+                    <td>${val.price}</td>
+          `;
+        item.appendChild(tr);
+      });
+    });
+    const TotalSm = arr.reduce((accumulator, Object) => {
+      return accumulator + Object.price;
+    }, 0);
+
+    let products =
+      JSON.parse(localStorage.getItem("cart")).length > 0
+        ? JSON.parse(localStorage.getItem("cart"))
+        : JSON.parse(localStorage.getItem("checkout"));
+    console.log(products);
+    let newProductsArray = [];
+    // console.log("products", products)
+    for (let i = 0; i < products.length; i++) {
+      newProductsArray.push({
+        product_id: products[i].product_id,
+        number: products[i].number,
+        number_rate: products[i].price,
+        total: products[i].price,
+        upc_no: "",
+      });
+    }
+
+    //customer info
+    let customer_id;
+    let customer_name = "";
+    let customer_no = "";
+    let customer_email = "";
+    let customer_address = "";
+    let customer_state = "";
+    let customer_pincode = "";
+    var myHeaders = new Headers();
+    myHeaders.append("token", localStorage.getItem("user"));
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+    // fetch(
+    //   "http://localhost:3000/api/v1/customer/customer_info",
+    //   requestOptions
+    // )
+    fetch(
+      "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.status == "success") {
+          customer_id = result.data.customer_id;
+          customer_name = result.data.customer_name;
+          customer_no = result.data.customer_no;
+          customer_email = result.data.email;
+          customer_address = result.data.address;
+          customer_state = result.data.state;
+          customer_pincode = result.data.pincode;
+        } else localStorage.removeItem("user");
+      })
+      .catch((error) => console.log("error", error));
+    // totalSm.innerHTML = `₹ ${TotalSm}`;
+    // let place_order = screen.width > 768 ? "" : "_mob";
+    // var payment_method =
+    //   screen.width > 768
+    //     ? document.querySelector('.pay_type:checked').value
+    //     : document.querySelector('.pay_type_mob:checked').value;
+    // var payment_method = document.getElementById("pay_type").value;
+    // pay_type_mob
+    document.querySelector(".place_btn").addEventListener("click", () => {
+      if (customer_id > 0) {
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+        myHeaders.append("Content-Type", "application/json");
+        // var payment_method = document.getElementById("pay_type").value;
+        var payment_method =
+          document.querySelector(".pay_type:checked").value;
+
+        var raw = JSON.stringify({
+          name: customer_name,
+          email: customer_email,
+          mobile_no: customer_no,
+          customer_id: customer_id,
+          order_total: Total,
+          assign_to: "",
+          order_status: "New",
+          payment_status: "Pending",
+          process_status: "New",
+          payment_id: "",
+          payment_method: payment_method,
+          payment_no: "",
+          purchase_details: newProductsArray,
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        // fetch(
+        //   "http://localhost:3000/api/v1/customer/checkout_order",
+        //   requestOptions
+        // )
+        fetch(
+          "https://vipnumberapi.bigboychoice.com/api/v1/customer/checkout_order",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.status == "success") {
+              // var payment_method = document.getElementById("pay_type").value;
+
+              if (payment_method == "Paytm") {
+                console.log("payment_method", payment_method);
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+
+                const getData = (data) => {
+                  console.log("data");
+
+                  return fetch(
+                    `https://vipnumberapi.bigboychoice.com/api/v1/customer/payment_paytm`,
+                    {
+                      // return fetch(`http://localhost:3000/api/v1/customer/payment_paytm`, {
+                      method: "POST",
+                      headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(data),
+                    }
+                  )
+                    .then((response) => response.json())
+                    .catch((err) => console.log(err));
+                };
+
+                const makePayment = () => {
+                  getData({
+                    amount: result.data.order_total,
+                    email: result.data.email,
+                    number: result.data.mobile_no,
+                    orderid: result.data.order_id,
+                    custid: result.data.customer_id,
+                    order_no: result.data.order_no,
+                  }).then((response) => {
+                    console.log("response", response);
+                    var information = {
+                      action: "https://securegw.paytm.in/order/process",
+                      // action: "https://securegw-stage.paytm.in/order/process",
+                      params: response,
+                    };
+                    post(information);
+                  });
+                };
+                makePayment();
+              } else if (payment_method == "CashFree") {
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+                  console.log("params", params);
+                  // params = JSON.parse(JSON.stringify(params))
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    console.log(stringifyValue(params[key]));
+                    // cosnole.log(key)
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+
+                //                 $secretKey = "a3377723d755c13d0360c758ffeee9324dbb7e31";
+                // $postData = array(
+                // "appId" => $appId,
+                // "orderId" => $orderId,
+                // "orderAmount" => $orderAmount,
+                // "orderCurrency" => $orderCurrency,
+                // "orderNote" => $orderNote,
+                // "customerName" => $customerName,
+                // "customerPhone" => $customerPhone,
+                // "customerEmail" => $customerEmail,
+                // "returnUrl" => $returnUrl,
+                // "notifyUrl" => $notifyUrl,
+                //
+                const makePayment = () => {
+                  var response = {
+                    appId: "19346885d8be301e6909012f81864391",
+                    // "appId": "2418364098716c255c5a8fce66638142",
+                    customerName: customer_name,
+                    orderAmount: result.data.order_total,
+                    orderCurrency: "INR",
+                    orderNote: "CashFree",
+                    customerEmail: customer_email,
+                    customerPhone: result.data.mobile_no,
+                    orderId: result.data.order_no,
+                    // "returnUrl": "http://localhost/vipnumberclub_frontend/php/response.php",
+                    // "notifyUrl": "http://localhost/vipnumberclub_frontend/php/response.php"
+                    returnUrl: "https://vipnumberclub.com/php/response.php",
+                    notifyUrl: "https://vipnumberclub.com/php/response.php",
+                  };
+                  // response = JSON.stringify(response)
+                  response = JSON.parse(JSON.stringify(response));
+                  console.log("response", response);
+                  var information = {
+                    action: "php/request.php",
+                    params: response,
+                  };
+                  post(information);
+                };
+                makePayment();
+              } else if (payment_method == "PayU") {
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+                  console.log("params", params);
+                  // params = JSON.parse(JSON.stringify(params))
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    console.log(stringifyValue(params[key]));
+                    // cosnole.log(key)
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+                var raw1 = JSON.stringify({
+                  order_id: result.data.order_id,
+                });
+
+                var requestOptions1 = {
+                  method: "POST",
+                  headers: myHeaders,
+                  body: raw1,
+                  redirect: "follow",
+                };
+                const makePayment = () => {
+                  fetch(
+                    "https://vipnumberapi.bigboychoice.com/api/v1/customer/payu_payment",
+                    // fetch(
+                    //   "http://localhost:3000/api/v1/customer/payu_payment",
+                    requestOptions1
+                  )
+                    .then((response) => response.json())
+                    .then((result) => {
+                      // response = JSON.parse(JSON.stringify(response))
+                      console.log("result", result.data);
+                      var information = {
+                        action: "https://secure.payu.in/_payment",
+                        // action: "https://test.payu.in/_payment",
+                        params: result.data,
+                      };
+                      post(information);
+                    })
+                    .catch((error) => console.log("error", error));
+                };
+                makePayment();
+              } else {
+                var options = {
+                  key: "rzp_live_MnWjIg6CvzwE2K",
+                  amount: parseInt(Total) * 100, // Amount is in currency subunits. Default currency is INR. Hence, 29935 refers to 29935 paise or INR 299.35.
+                  currency: "INR",
+                  name: "VIP NUMBER CLUB",
+                  description: "VIP NUMBER CLUB",
+                  image: "Assets/vipnumlogore.png",
+                  //"order_id": "order_9A33XWu170gUtm",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
+                  handler: function (response) {
+                    var razorpay_payment_id = response.razorpay_payment_id;
+                    // onpage-loader
+                    $.ajax({
+                      type: "POST",
+                      url: "php/get-cap.php",
+                      dataType: "json",
+                      data: {
+                        razorpay_idpay: razorpay_payment_id,
+                        amounts: parseInt(Total),
+                      },
+                      success: function (response1) {
+                        // console.log(response1);
+                        if (response1.status == 201) {
+                          capture_status = response1.capture_status;
+
+                          var myHeaders = new Headers();
+                          myHeaders.append(
+                            "token",
+                            localStorage.getItem("user")
+                          );
+                          myHeaders.append(
+                            "Content-Type",
+                            "application/json"
+                          );
+                          var payment_date = new Date()
+                            .toJSON()
+                            .slice(0, 10)
+                            .replace(/-/g, "-");
+                          var raw = JSON.stringify({
+                            name: customer_name,
+                            email: customer_email,
+                            mobile_no: customer_no,
+                            customer_id: customer_id,
+                            order_total: Total,
+                            assign_to: "",
+                            payment_date,
+                            order_status: "Paid",
+                            payment_status: "Order Placed",
+                            process_status: "Order Placed",
+                            vendor_payment_status: "Pending",
+                            payment_id: razorpay_payment_id,
+                            payment_method: "Razorpay",
+                            payment_no: "",
+                          });
+
+                          var requestOptions = {
+                            method: "POST",
+                            headers: myHeaders,
+                            body: raw,
+                            redirect: "follow",
+                          };
+
+                          fetch(
+                            "https://vipnumberapi.bigboychoice.com/api/v1/customer/update_order/" +
+                            result.data.order_no,
+                            requestOptions
+                          )
+                            .then((response) => response.json())
+                            .then((result) => {
+                              if (result.status == "success") {
+                                Toastify({
+                                  text: "Order Placed Successfully!",
+                                  duration: 3000,
+                                  newWindow: true,
+                                  close: true,
+                                  gravity: "top", // `top` or `bottom`
+                                  position: "right", // `left`, `center` or `right`
+                                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                                  style: {
+                                    background: "#32cd32",
+                                  },
+                                }).showToast();
+                                setTimeout(() => {
+                                  localStorage.removeItem("cart");
+                                  window.location = "/success";
+                                }, 1000);
+                              }
+                            })
+                            .catch((error) => console.log("error", error));
+                        }
+                      },
+                    });
+                    var razorpay_payment_id = response.razorpay_payment_id;
+                  },
+                  prefill: {
+                    name: customer_name,
+                    email: customer_email,
+                    phone: customer_no,
+                    contact: customer_no,
+                  },
+                  notes: {
+                    address: customer_address,
+                    state: customer_state,
+                    postcode: customer_pincode,
+                  },
+                  theme: {
+                    color: "#F9C835",
+                  },
+                };
+
+                var rzp1 = new Razorpay(options);
+                rzp1.open();
+              }
+            } else {
+              Toastify({
+                text: "Unexpected Error!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "red",
+                },
+              }).showToast();
+            }
+          })
+          .catch((error) => console.log("error", error));
+      } else window.location = "./sign.html?checkout=true";
+    });
+
+    document.querySelector(".place_btn_mob").addEventListener("click", () => {
+      console.log("customer_id")
+      if (customer_id > 0) {
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+        myHeaders.append("Content-Type", "application/json");
+        // var payment_method = document.getElementById("pay_type").value;
+        var payment_method = document.querySelector(
+          ".pay_type_mob:checked"
+        ).value;
+        var raw = JSON.stringify({
+          name: customer_name,
+          email: customer_email,
+          mobile_no: customer_no,
+          customer_id: customer_id,
+          order_total: Total,
+          assign_to: "",
+          order_status: "New",
+          payment_status: "Pending",
+          process_status: "New",
+          payment_id: "",
+          payment_method: payment_method,
+          payment_no: "",
+          purchase_details: newProductsArray,
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        // fetch(
+        //   "http://localhost:3000/api/v1/customer/checkout_order",
+        //   requestOptions
+        // )
+        fetch(
+          "https://vipnumberapi.bigboychoice.com/api/v1/customer/checkout_order",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.status == "success") {
+              // var payment_method = document.getElementById("pay_type").value;
+
+              if (payment_method == "Paytm") {
+                console.log("payment_method", payment_method);
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+
+                const getData = (data) => {
+                  console.log("data");
+
+                  return fetch(
+                    `https://vipnumberapi.bigboychoice.com/api/v1/customer/payment_paytm`,
+                    {
+                      // return fetch(`http://localhost:3000/api/v1/customer/payment_paytm`, {
+                      method: "POST",
+                      headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(data),
+                    }
+                  )
+                    .then((response) => response.json())
+                    .catch((err) => console.log(err));
+                };
+
+                const makePayment = () => {
+                  getData({
+                    amount: result.data.order_total,
+                    email: result.data.email,
+                    number: result.data.mobile_no,
+                    orderid: result.data.order_id,
+                    custid: result.data.customer_id,
+                    order_no: result.data.order_no,
+                  }).then((response) => {
+                    console.log("response", response);
+                    var information = {
+                      action: "https://securegw.paytm.in/order/process",
+                      // action: "https://securegw-stage.paytm.in/order/process",
+                      params: response,
+                    };
+                    post(information);
+                  });
+                };
+                makePayment();
+              } else if (payment_method == "CashFree") {
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+                  console.log("params", params);
+                  // params = JSON.parse(JSON.stringify(params))
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    console.log(stringifyValue(params[key]));
+                    // cosnole.log(key)
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+
+                //                 $secretKey = "a3377723d755c13d0360c758ffeee9324dbb7e31";
+                // $postData = array(
+                // "appId" => $appId,
+                // "orderId" => $orderId,
+                // "orderAmount" => $orderAmount,
+                // "orderCurrency" => $orderCurrency,
+                // "orderNote" => $orderNote,
+                // "customerName" => $customerName,
+                // "customerPhone" => $customerPhone,
+                // "customerEmail" => $customerEmail,
+                // "returnUrl" => $returnUrl,
+                // "notifyUrl" => $notifyUrl,
+                //
+                const makePayment = () => {
+                  var response = {
+                    // "appId": "19346885d8be301e6909012f81864391",
+                    appId: "2418364098716c255c5a8fce66638142",
+                    customerName: customer_name,
+                    orderAmount: result.data.order_total,
+                    orderCurrency: "INR",
+                    orderNote: "CashFree",
+                    customerEmail: customer_email,
+                    customerPhone: result.data.mobile_no,
+                    orderId: result.data.order_no,
+                    // "returnUrl": "http://localhost/vipnumberclub_frontend/php/response.php",
+                    // "notifyUrl": "http://localhost/vipnumberclub_frontend/php/response.php"
+                    returnUrl: "https://vipnumberclub.com/php/response.php",
+                    notifyUrl: "https://vipnumberclub.com/php/response.php",
+                  };
+                  // response = JSON.stringify(response)
+                  response = JSON.parse(JSON.stringify(response));
+                  console.log("response", response);
+                  var information = {
+                    action: "php/request.php",
+                    params: response,
+                  };
+                  post(information);
+                };
+                makePayment();
+              } else if (payment_method == "PayU") {
+                function isDate(val) {
+                  // Cross realm comptatible
+                  return (
+                    Object.prototype.toString.call(val) === "[object Date]"
+                  );
+                }
+
+                function isObj(val) {
+                  return typeof val === "object";
+                }
+                function stringifyValue(val) {
+                  if (isObj(val) && !isDate(val)) {
+                    return JSON.stringify(val);
+                  } else {
+                    return val;
+                  }
+                }
+                async function buildForm({ action, params }) {
+                  const form = document.createElement("form");
+                  await form.setAttribute("method", "post");
+                  await form.setAttribute("action", action);
+                  console.log("params", params);
+                  // params = JSON.parse(JSON.stringify(params))
+
+                  Object.keys(params).forEach((key) => {
+                    const input = document.createElement("input");
+                    input.setAttribute("type", "hidden");
+                    input.setAttribute("name", key);
+                    console.log(stringifyValue(params[key]));
+                    // cosnole.log(key)
+                    input.setAttribute("value", stringifyValue(params[key]));
+                    form.appendChild(input);
+                  });
+
+                  return form;
+                }
+
+                async function post(details) {
+                  const form = await buildForm(details);
+                  console.log("form", form);
+                  console.log(form);
+                  await document.body.appendChild(form);
+                  form.submit();
+                  form.remove();
+                }
+                var raw1 = JSON.stringify({
+                  order_id: result.data.order_id,
+                });
+
+                var requestOptions1 = {
+                  method: "POST",
+                  headers: myHeaders,
+                  body: raw1,
+                  redirect: "follow",
+                };
+                const makePayment = () => {
+                  fetch(
+                    "https://vipnumberapi.bigboychoice.com/api/v1/customer/payu_payment",
+                    // fetch(
+                    //   "http://localhost:3000/api/v1/customer/payu_payment",
+                    requestOptions1
+                  )
+                    .then((response) => response.json())
+                    .then((result) => {
+                      // response = JSON.parse(JSON.stringify(response))
+                      console.log("result", result.data);
+                      var information = {
+                        action: "https://secure.payu.in/_payment",
+                        // action: "https://test.payu.in/_payment",
+                        params: result.data,
+                      };
+                      post(information);
+                    })
+                    .catch((error) => console.log("error", error));
+                };
+                makePayment();
+              } else {
+                var options = {
+                  key: "rzp_live_MnWjIg6CvzwE2K",
+                  amount: parseInt(Total) * 100, // Amount is in currency subunits. Default currency is INR. Hence, 29935 refers to 29935 paise or INR 299.35.
+                  currency: "INR",
+                  name: "VIP NUMBER CLUB",
+                  description: "VIP NUMBER CLUB",
+                  image: "Assets/vipnumlogore.png",
+                  //"order_id": "order_9A33XWu170gUtm",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
+                  handler: function (response) {
+                    var razorpay_payment_id = response.razorpay_payment_id;
+                    // onpage-loader
+                    $.ajax({
+                      type: "POST",
+                      url: "php/get-cap.php",
+                      dataType: "json",
+                      data: {
+                        razorpay_idpay: razorpay_payment_id,
+                        amounts: parseInt(Total),
+                      },
+                      success: function (response1) {
+                        // console.log(response1);
+                        if (response1.status == 201) {
+                          capture_status = response1.capture_status;
+
+                          var myHeaders = new Headers();
+                          myHeaders.append(
+                            "token",
+                            localStorage.getItem("user")
+                          );
+                          myHeaders.append(
+                            "Content-Type",
+                            "application/json"
+                          );
+                          var payment_date = new Date()
+                            .toJSON()
+                            .slice(0, 10)
+                            .replace(/-/g, "-");
+                          var raw = JSON.stringify({
+                            name: customer_name,
+                            email: customer_email,
+                            mobile_no: customer_no,
+                            customer_id: customer_id,
+                            order_total: Total,
+                            assign_to: "",
+                            payment_date,
+                            order_status: "Paid",
+                            payment_status: "Order Placed",
+                            process_status: "Order Placed",
+                            vendor_payment_status: "Pending",
+                            payment_id: razorpay_payment_id,
+                            payment_method: "Razorpay",
+                            payment_no: "",
+                          });
+
+                          var requestOptions = {
+                            method: "POST",
+                            headers: myHeaders,
+                            body: raw,
+                            redirect: "follow",
+                          };
+
+                          fetch(
+                            "https://vipnumberapi.bigboychoice.com/api/v1/customer/update_order/" +
+                            result.data.order_no,
+                            requestOptions
+                          )
+                            .then((response) => response.json())
+                            .then((result) => {
+                              if (result.status == "success") {
+                                Toastify({
+                                  text: "Order Placed Successfully!",
+                                  duration: 3000,
+                                  newWindow: true,
+                                  close: true,
+                                  gravity: "top", // `top` or `bottom`
+                                  position: "right", // `left`, `center` or `right`
+                                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                                  style: {
+                                    background: "#32cd32",
+                                  },
+                                }).showToast();
+                                setTimeout(() => {
+                                  localStorage.removeItem("cart");
+                                  window.location = "/success";
+                                }, 1000);
+                              }
+                            })
+                            .catch((error) => console.log("error", error));
+                        }
+                      },
+                    });
+                    var razorpay_payment_id = response.razorpay_payment_id;
+                  },
+                  prefill: {
+                    name: customer_name,
+                    email: customer_email,
+                    phone: customer_no,
+                    contact: customer_no,
+                  },
+                  notes: {
+                    address: customer_address,
+                    state: customer_state,
+                    postcode: customer_pincode,
+                  },
+                  theme: {
+                    color: "#F9C835",
+                  },
+                };
+
+                var rzp1 = new Razorpay(options);
+                rzp1.open();
+              }
+            } else {
+              Toastify({
+                text: "Unexpected Error!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "red",
+                },
+              }).showToast();
+            }
+          })
+          .catch((error) => console.log("error", error));
+      } else window.location = "./sign.html?checkout=true";
+    });
+
+    let checkMob = screen.width > 700 ? "" : "Sm";
+    let count = 1;
+    $(".coupon_btn" + ifMob).click(() => {
+      if ($(".coupon" + ifMob).val().length > 0) {
+        var myHeaders = new Headers();
+        myHeaders.append("token", localStorage.getItem("user"));
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+          coupon: $(".coupon" + ifMob).val(),
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        fetch(
+          "https://vipnumberapi.bigboychoice.com/api/v1/customer/apply_coupon",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.status == "success" && count == 1) {
+              count += 1;
+              let value = result.data.value;
+              let amount = $(".total" + checkMob)
+                .html()
+                .split("₹");
+
+              // if (result.data.min_purchase <= parseInt(amount[1])) {
+              if (result.data.type == "Percentage") {
+                let totalAmount = (amount[1] * value) / 100;
+                $(".total" + checkMob).html(amount[1] - totalAmount);
+                $(".total" + checkMob).html(
+                  "₹ " + $(".total" + checkMob).html()
+                );
+                Total = amount[1] - totalAmount;
+                Toastify({
+                  text: "Coupon applied successfully!",
+                  duration: 3000,
+                  newWindow: true,
+                  close: true,
+                  gravity: "top", // `top` or `bottom`
+                  position: "right", // `left`, `center` or `right`
+                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                  style: {
+                    background: "#32cd32",
+                  },
+                }).showToast();
+                $(".removeCoupon").removeClass("d-none");
+                $(".removeCouponMob").removeClass("d-none");
+              } else {
+                Toastify({
+                  text: "Coupon applied successfully!",
+                  duration: 3000,
+                  newWindow: true,
+                  close: true,
+                  gravity: "top", // `top` or `bottom`
+                  position: "right", // `left`, `center` or `right`
+                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                  style: {
+                    background: "#32cd32",
+                  },
+                }).showToast();
+                $(".removeCoupon").removeClass("d-none");
+                $(".removeCouponMob").removeClass("d-none");
+                $(".total" + checkMob).html(amount[1] - value);
+                $(".total" + checkMob).html(
+                  "₹ " + $(".total" + checkMob).html()
+                );
+                Total = amount[1] - totalAmount;
+              }
+
+              // }
+              //  else {
+              //   Toastify({
+              //     text: `Please make a purchase of atleast ${result.data.min_purchase} to avail this coupon!`,
+              //     duration: 3000,
+              //     newWindow: true,
+              //     close: true,
+              //     gravity: "top", // `top` or `bottom`
+              //     position: "right", // `left`, `center` or `right`
+              //     stopOnFocus: true, // Prevents dismissing of toast on hover
+              //     style: {
+              //       background: "red",
+              //     },
+              // }).showToast();
+              // }
+            } else {
+              Toastify({
+                text: "Not Applicable!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "red",
+                },
+              }).showToast();
+            }
+          })
+          .catch((error) => console.log("error", error));
+      } else {
+        Toastify({
+          text: "Please enter a valid coupon name!",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+      }
+    });
+
+    $("#applyCoupon" + ifMob).click(() => {
+      $(".couponBox" + ifMob).removeClass("d-none");
+      $("#applyCoupon" + ifMob).hide();
+    });
+  </script>
+  <!--script for cart Mobile end-->
+  <!--scripts end-->
+<script>
+    window.addEventListener("scroll", function () {
+      let main = document.querySelector(".margin-top-on-scroll-js");
+      if (window.pageYOffset == 0) {
+        document
+          .querySelector(".margin-top-on-scroll-js")
+          .classList.remove("margin-top-on-scroll");
+      }
+      if (window.pageYOffset > 0) {
+        document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+      }
+    });
+  </script></body>
+
+</html>

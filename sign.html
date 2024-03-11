@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-YR72WNHR7F");
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="./Css/sign.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="./Assets/logo.png" />
+  <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+  <link rel="stylesheet" type="text/css" href="./Css/cart.css" />
+  <link rel="stylesheet" type="text/css" href="Css/Checkout.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="./Assets/vipnumlogore.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" style="user-select: none">
+  <div class="d-none d-lg-block">
+    <div id="nav-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("./Template/Navbar.html");
+      });
+    </script>
+    <div class="wrapper p-5 margin-top-on-scroll-js" style="height: 90vh;background: #fff;padding-top: 0 !important;">
+      <div style="position:absolute;top:80px;left:0;z-index: 1;">
+        <img style="width: 210px;" alt="" src="./Assets/Rangoli.PNG">
+      </div>
+      <div class="sign-container mx-3 mt-2" style="z-index: 5;">
+        <div class="container-fluid p-3">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6">
+              <div class="image-column">
+                <img src="./Assets/sign.svg" />
+                <!-- <img src="./Assets/login-art.png" alt=""> -->
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+              <div class="sign-section p-4">
+                <div class="welcome-message mt-5 mb-5">
+                  <h2 class="text-center"><span style="color: #F9C835;">Hello !</span> Welcome back.</h2>
+                  <p style="font-size: 1.1rem;">
+                    There is No Need To Remember a password, All You Need is your Mobile Number/Email Address
+                  </p>
+                </div>
+                <form class="sign-form">
+                  <div class="mb-2">
+                    <label for="Email" class="form-label"><span style="font-size: 1.5rem;font-weight:600;">Login </span>
+                      &nbsp;or &nbsp; <span style="font-size: 1.4rem;font-weight:600;">Sign Up</span></label>
+                    <input type="text" class="form-control sign-input-lg" placeholder="Enter number here..."
+                      id="signIn" />
+                  </div>
+                  <p class="p-hide" style="text-align: center; font-weight: 500;font-size: 1.1rem;margin-top: 20px;">By
+                    Continuing, I agree to the <a href="./Terms.html"> Term & conditions</a></p>
+                  <button type="button" id="login" class="btn btn-primary continue"
+                    style="color: #000;border-radius: 0;font-weight: 600;">
+                    Continue
+                  </button>
+
+                  <div class="mt-3 option-div-cont p-hide" style="display: none;">
+                    <div class="option-div otp" style="border-radius: 0;color: #000;">Login with OTP</div>
+                    <div class="option-div login-btn ms-3" style="border-radius: 0;color: #000;">
+                      Login with Password
+                    </div>
+                  </div>
+                </form>
+
+                <!-- <h3 class="mb-3">
+                  Don't have account ? <a href="./Register.html">Sign Up</a>
+                </h3> -->
+
+                <!-- <div class="otpScreen p-3 d-none">
+                  <i class="fa-solid fa-xmark d-flex justify-content-end close-lg"
+                    style="color: #f44b01; cursor: pointer"></i>
+                  <h2 class="otp-title">Verify Details</h2>
+                  <h3>OTP sent to your mobile number.</h3>
+                  <div class="d-flex align-items-center flex-row">
+                    <h5 class="registered-Number mb-1">+91-9530000007</h5>
+                  </div>
+                  <div class="d-flex flex-row mb-2">
+                    <input type="text" minlength="1" id="otp1" placeholder="Enter OTP here..."
+                      style="border-radius: 4px" />
+                  </div>
+                  
+                </div> -->
+
+                <div class="otpScreen p-3 d-none"
+                  style="box-shadow: 7px 6px 21px #ddd, -6px -6px 25px#ddd;position: relative;">
+                  <i class="fa-solid fa-xmark d-flex justify-content-end close-lg"
+                    style="position: absolute;right: 10px;color: #ffbf00; cursor: pointer;border: 1px solid #ffbf00;border-radius: 50%;padding: 6px 8px;"></i>
+                  <h2 class="otp-title" style="font-weight: 600;color: #000;">Verify Details</h2>
+                  <h3>OTP sent to your mobile number.</h3>
+                  <div style="font-size: .9rem;color:#ffbf00;padding:5px;" class="d-flex align-items-center flex-row">
+                    <h5 style="font-size: .9rem;background-color:rgb(230 230 230);padding: 0px 5px; "
+                      class="registered-Number mb-1">+91-9530000007</h5><span class="close-lg-edit" style="margin-left: 8px;">Edit</span>
+                  </div>
+                  <div class="d-flex flex-row mb-2">
+                    <form class="form-otp">
+                      <input type="text" maxlength="1" id="otp1" max="9" class="inputs"
+                        style="text-align: center; width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                      <input type="text" maxlength="1" id="otp2" max="9" class="inputs"
+                        style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                      <input type="text" maxlength="1" id="otp3" max="9" class="inputs"
+                        style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                      <input type="text" maxlength="1" id="otp4" max="9"
+                        style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;"
+                        class="inputs" />
+                      <button type="button" class="resend-link p-1 mb-0"
+                        style="border-radius: 6px;display: block;background-color: #ffbf00;border: none;width: 100px;margin-top: 30px;">
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                  <script>
+                      function handleSwitchLaptop2(){
+                        document.querySelector('.login-btn').click();
+                      }
+                    </script>
+                  </script>
+
+                  <div class="otpResend" style="color: #ffbf00;">Resend OTP</div>
+                  <div style="font-size: 1rem;margin-top: 20px;color: #000;">
+                    <div>- Make sure you entered correct mobile number</div>
+                    <div>- You can also <span onclick="handleSwitchLaptop2()" class="close-lg-password" style="color: #ffbf00;">Login With Password</span></div>
+                  </div>
+                </div>
+
+                <!-- <div class="login-screen-lg d-none">
+                  <p class="mb-1">NUMBER: <span class="ms-3"></span></p>
+                  <div class="mb-3 d-flex align-items-center">
+                    <label for="password-inp" class="form-label me-2 mb-0">PASSWORD</label>
+                    <input type="text" id="password-inp" class="form-control" placeholder="Enter password here..."
+                      style="width: 40%" />
+                  </div>
+                  <button type="btn" class="btn-secondary btn login-call">
+                    Login
+                  </button>
+                </div> -->
+
+
+                <div class="login-screen-lg p-3 d-none">
+                  <div><span style="font-size: 1.5rem;font-weight:600;">Login </span></div>
+                  <p style="color: rgb(193, 193, 193);border-radius: 5px; border:3px solid rgb(193, 193, 193);padding: 5px;"
+                    class="mb-1"><i style="margin-left: 2%;" class="fa-solid fa-mobile-retro"></i> <span
+                      style="color: #000;background-color: rgb(193, 193, 193);padding: 2px 10px;"
+                      class="ms-3 number"></span> <span class="close-lg-edit-2" style="float: right;margin-right:1.7rem">edit</span></p>
+                  <div style="color: rgb(193, 193, 193);border-radius: 5px;border:3px solid #F9C835;margin-bottom: 7px;"
+                    class="mt-3 d-flex align-items-center">
+                    <label for="password-inp" class="form-label me-2 mb-0"><i style="margin-left: 40%;"
+                        class="fa-solid fa-key"></i></label>
+                    <input type="password" id="password-inp" class="form-control" placeholder="Enter password here..."
+                      style="width: 40%;border: none" />
+                  </div>
+                  <p style="text-align: center; font-weight: 500;font-size: .9rem;margin-bottom: 5px;">By Continuing, I agree
+                    to the <a href="./Terms.html"> Term & conditions</a></p>
+                  <button style="border: none !important;" type="btn" class="btn-secondary btn login-call new-ntn"
+                    id="login">
+                    Login
+                  </button>
+                  <div style="width:95%; margin:auto;display: flex;justify-content:space-between;margin-top: 6px;">
+                    <span onclick="handleSwitchLaptop1()">Login with OTP</span>
+                    <span>Forgot Password</span>
+                    <script>
+                      function handleSwitchLaptop1(){
+                        document.querySelector('.otp').click();
+                      }
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="foot-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#foot-placeholder").load("./Template/Footer.html");
+      });
+    </script>
+  </div>
+
+  <div class="d-block d-lg-none">
+    <!--Navbar start-->
+    <div id="mobNav-placeholder"></div>
+    <script>
+      $(document).ready(function () {
+        $("#mobNav-placeholder").load("./Template/MobileNav.html");
+      });
+    </script>
+    <!--Navbar end-->
+    <div class="carousel-inner margin-top-on-scroll-js">
+      <div>
+        <!---Banner 1 start-->
+        <div class="Banner" style="height: auto !important;">
+          <div style="background-color: #fff !important;" class="">
+            <div class="row align-items-center">
+              <div class="col-xl-7 col-lg-7" style="padding-left:0; padding-right:0;">
+                <div class="banner-left" style="display: flex;">
+                  <img style="width: 148px;" src="./Assets/Rangoli.PNG" alt="welcome" />
+                  <div style="margin-left: 1.5rem;">
+                    <img style="width: 132px;" src="./Assets/login-art.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---Banner 1 end-->
+      </div>
+    </div>
+    <div class="wrapper p-1" style="background: #fff;">
+      <div class="sign-container mx-3"
+        style="border: 1px solid #ddd;border-radius:0px;background-color:#fff !important">
+        <div class="sign-section p-4 pb-10">
+          <div class="text-center">
+            <!-- <img src="./Assets/sign.svg" width="120" /> -->
+          </div>
+          <div class="welcome-message mb-4">
+            <h2 class="text-center" style="font-size: 1.5rem;font-weight: 600;"><span style="color: #F9C835;">Hello
+                !</span> Welcome back.</h2>
+            <p>
+              There is No Need To Remember a password, All You Need is your Mobile Number/Email Address
+            </p>
+          </div>
+          <form class="sign-form-mobile">
+            <div class="mb-3 mobile-form">
+              <label for="Email" class="form-label"><span style="font-size: 1.2rem;font-weight:600;">Login </span>
+                &nbsp;or &nbsp; <span style="font-size: 1.2rem;font-weight:600;">Sign Up</span></label>
+              <input type="email" class="form-control sign-input-sm" placeholder="Enter number here..." />
+            </div>
+            <p style="text-align: center; font-weight: 500;font-size: .9rem;">By Continuing, I agree to the <a
+                href="./Terms.html"> Term & conditions</a></p>
+            <button style="border-radius: 0px;color: #000;font-size: 1rem;" class="continue-sm btn btn-primary"
+              type="button">
+              Continue
+            </button>
+            <div class="mt-3 option-div-cont-sm justify-content-center" style="display: none">
+              <div class="option-div otpM font-size-gmoto" style="border-radius: 0px;color: #000;">Login with OTP</div>
+              <div class="option-div loginbtnM ms-3 font-size-gmoto" style="border-radius: 0px;color: #000;">Login with
+                Password</div>
+            </div>
+            <!-- <h3>Don't have account ? <a href="./Register">Sign Up</a></h3> -->
+          </form>
+          <div class="otpScreen-Mobile p-3 d-none"
+            style="box-shadow: 7px 6px 21px #ddd, -6px -6px 25px#ddd;position: relative;">
+            <i class="fa-solid fa-xmark close mobile-login-cross"
+              style="position: absolute;right: 10px;color: #ffbf00; cursor: pointer;border: 1px solid #ffbf00;border-radius: 50%;padding: 6px 8px;"></i>
+            <h2 class="otp-title" style="font-weight: 600;">Verify Details</h2>
+            <h3>OTP sent to your mobile number.</h3>
+            <div style="font-size: .9rem;color:#ffbf00;padding:5px;" class="d-flex align-items-center flex-row">
+              <h5 style="font-size: .9rem;background-color:rgb(230 230 230);padding: 0px 5px; "
+                class="registered-Numbermob mb-1">+91-9530000007</h5><span class="mobile-login-edit2" style="margin-left: 8px;">Edit</span>
+            </div>
+            <div class="d-flex flex-row mb-2">
+              <form class="form-otp">
+                <input type="text" maxlength="1" id="otp1M" max="9" class="inputs"
+                  style="text-align: center; width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                <input type="text" maxlength="1" id="otp2M" max="9" class="inputs"
+                  style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                <input type="text" maxlength="1" id="otp3M" max="9" class="inputs"
+                  style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+                <input type="text" maxlength="1" id="otp4M" max="9"
+                  style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;"
+                  class="resend-linkm inputs" />
+              </form>
+            </div>
+
+            <div class="otpResendM" style="color: #ffbf00;">Resend OTP</div>
+            <div style="font-size: .8rem;margin-top: 20px;">
+              <div>- Make sure you entered correct mobile number</div>
+              <div>- You can also <span onclick="handleSwitchMobile1()" style="color: #ffbf00;">Login With Password</span></div>
+            </div>
+            <script>
+              function handleSwitchMobile1(){
+                document.querySelector('.loginbtnM').click();
+              }
+              function handleSwitchMobile2(){
+                document.querySelector('.otpM').click();
+              }
+            </script>
+            <!-- <p style="text-align: center; font-weight: 500;font-size: .9rem;">By Continuing, I agree to the <a href="./Terms.html"> Term & conditions</a></p> -->
+            <!-- <button
+                class="resend-linkm p-1 mb-0"
+                style="border: 1.5px solid #f44b01; border-radius: 6px"
+              >
+                Login
+              </button> -->
+          </div>
+
+          <div class="loginScreenM p-3 d-none">
+            <div><span style="font-size: 1.2rem;font-weight:600;">Login </span></div>
+            <p style="color: rgb(193, 193, 193);border-radius: 5px; border:3px solid rgb(193, 193, 193);padding: 5px;"
+              class="mb-1"><i style="margin-left: 2%;" class="fa-solid fa-mobile-retro"></i> <span
+                style="color: #000;background-color: rgb(193, 193, 193);padding: 2px 10px;"
+                class="ms-3 number_sm"></span> <span class="mobile-login-edit" style="float: right;margin-right:1.7rem">edit</span></p>
+            <div style="color: rgb(193, 193, 193);border-radius: 5px;border:3px solid #F9C835;margin-bottom: 7px;"
+              class="mt-3 d-flex align-items-center">
+              <label for="password-inp-mob" class="form-label me-2 mb-0"><i style="margin-left: 40%;"
+                  class="fa-solid fa-key"></i></label>
+              <input type="password" id="password-inp-mob" class="form-control" placeholder="Enter password here..."
+                style="width: 40%;border: none" />
+            </div>
+            <p style="text-align: center; font-weight: 500;font-size: .9rem;margin-bottom: 5px;">By Continuing, I agree
+              to the <a href="./Terms.html"> Term & conditions</a></p>
+            <button style="border: none !important;" type="btn" class="btn-secondary btn login-call new-ntn"
+              id="loginMob">
+              Login
+            </button>
+            <div style="width:95%; margin:auto;display: flex;justify-content:space-between;margin-top: 6px;">
+              <span onclick="handleSwitchMobile2()">Login with OTP</span>
+              <span>Forgot Password</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+
+    $(".inputs").keyup(function () {
+      if (String(this.value).length == this.maxLength) {
+        var $next = $(this).next('.inputs');
+        if (String($next).length)
+          $(this).next('.inputs').focus();
+        else
+          $(this).blur();
+      }
+    });
+    $(".inputs").keyup(function () {
+      if (String(this.value).length === 0) {
+        var $prev = $(this).prev('.inputs');
+        if (String($prev).length)
+          $(this).prev('.inputs').focus();
+        else
+          $(this).blur();
+      }
+    });
+  </script>
+  <script type="module">
+    
+    let loginCall = document.querySelector(".login-call");
+    let loginMob = document.querySelector("#loginMob");
+    let cont = document.querySelector(".option-div-cont");
+    let btn = document.querySelector(".otp");
+    let form = document.querySelector(".sign-form");
+    let loginS = document.querySelector(".login-screen-lg");
+    let loginOTP = document.querySelector(".resend-link");
+    let loginOTPM = document.querySelector(".resend-linkm");
+    let otpScreen = document.querySelector(".otpScreen");
+    let closeModal = document.querySelector(".close-lg");
+    let closeModalEdit = document.querySelector(".close-lg-edit");
+    let closeModalEdit2 = document.querySelector(".close-lg-edit-2");
+    let otpResend = document.querySelector(".otpResend");
+
+    // let closeModalPass = document.querySelector(".close-lg-password");
+    // let closeSm = document.querySelector(".close-sm");
+    let edit = document.querySelector(".EditNumber");
+    let RegisterNumber = document.querySelector(".registered-Number");
+    let otp1 = document.getElementById("otp1");
+    let otp2 = document.getElementById("otp2");
+    let otp3 = document.getElementById("otp3");
+    let otp4 = document.getElementById("otp4");
+    let otp1M = document.getElementById("otp1M");
+    let otp2M = document.getElementById("otp2M");
+    let otp3M = document.getElementById("otp3M");
+    let otp4M = document.getElementById("otp4M");
+    let params = new URLSearchParams(window.location.search);
+
+    otp1.addEventListener("input", getOtp);
+    otp1M.addEventListener("input", getOtpM);
+    let OTP;
+    let value = true;
+    form.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+    btn.addEventListener("click", showOtpScreen);
+    otpResend.addEventListener("click", showOtpScreen);
+
+    closeModal.addEventListener("click", showForm);
+    closeModalEdit.addEventListener("click", showForm);
+    closeModalEdit2.addEventListener("click", showForm2);
+    
+    // closeModalPass.addEventListener("click", showForm);
+    // closeSm.addEventListener("click", showFormSm);
+
+    import config from "./conf/index.js";
+
+    async function sendOTP(num) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/send_otp?customer=${num}`,
+          {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            redirect: "follow",
+            referrerPolicy: "no-referrer",
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function showOtpScreen() {
+      let hide = document.querySelector(".p-hide");
+      const num = document.querySelector(".sign-input-lg").value;
+      btn.innerText = "Resend OTP";
+      let aj = loginS.classList.value.search("d-none");
+      if (aj === -1) {
+        loginS.classList.add("d-none");
+      }
+      console.log(num)
+      const res = await sendOTP(num);
+      RegisterNumber.innerText = "+91-" + num;
+      if (res.status === "success" && num.length > 0) {
+        hide.style.display = 'none';
+        Toastify({
+          text: "OTP SENT ",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#32cd32",
+          },
+        }).showToast();
+
+        form.classList.add("hide");
+        if (otpScreen.classList.contains("d-none")) {
+          otpScreen.classList.remove("d-none");
+        }
+      } else {
+        Toastify({
+          text: "User doesn't exist!",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+        localStorage.setItem("notRegisterNumber",num);
+        setTimeout(() => {
+            if (params.get("checkout")) {
+                window.location = "./Register.html?buynow=true";
+              } else window.location.href = "./Register.html";
+          }, 2000);
+      }
+    }
+
+    function showForm() {
+      otpScreen.classList.add("d-none");
+      form.classList.remove("hide");
+      btn.innerText = "Login with OTP";
+    }
+    function showForm2() {
+      loginS.classList.add("d-none");
+      form.classList.remove("hide");
+      btn.innerText = "Login with OTP";
+    }
+
+
+    function getOtp() {
+      OTP = parseInt(otp1.value + otp2.value + otp3.value + otp4.value);
+      console.log(OTP);
+    }
+    function getOtpM() {
+      OTP = parseInt(otp1M.value + otp2M.value + otp3M.value + otp4M.value);
+      console.log(OTP);
+    }
+
+    let continueLg = document.querySelector(".continue");
+    continueLg.addEventListener("click", function () {
+      console.log("continueLg")
+      let num = document.querySelector(".sign-input-lg").value.length;
+      if (num < 10 || num > 10) {
+        Toastify({
+          text: "Invalid Number",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+      } else {
+        continueLg.style.display = "none";
+        cont.classList.add("d-flex");
+      }
+    });
+
+    document
+      .querySelector(".login-btn")
+      .addEventListener("click", function () {
+        const num = document.querySelector(".sign-input-lg").value;
+        document.querySelector(".login-screen-lg .number").innerText = `+91-${num}`;
+        form.classList.add("hide");
+        loginS.classList.remove("d-none");
+        btn.innerText = "Login with OTP";
+        let aj = otpScreen.classList.value.search("d-none");
+        if (aj === -1) {
+          otpScreen.classList.add("d-none");
+        }
+      });
+
+    async function customerLogin(num, password) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/customer_login`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              customer_no: `${num}`,
+              password: `${password}`,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+        console.log("aj");
+      }
+    }
+    loginCall.addEventListener("click", async function () {
+      let password = document.querySelector("#password-inp").value;
+      console.log(password);
+      let num = document.querySelector(".sign-input-lg").value;
+      try {
+        let data = await customerLogin(num, password);
+
+        if (data.status === "success") {
+          const user = await fetch(
+            config.backendEndpoint + `/customer_info`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                token: `${data.token}`,
+              },
+            }
+          );
+          let userData = await user.json();
+
+          if (userData.status === "success") {
+            localStorage.setItem("user", userData.data.token);
+            Toastify({
+              text: "Logged In Successfully",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "#32cd32",
+              },
+            }).showToast();
+            setTimeout(function () {
+              if (params.get("checkout")) {
+                window.location = "./Checkout.html?buynow=true";
+              } else window.location.href = "/";
+            }, 500);
+          }
+        } else if (data.msg == "Customer does not exists!") {
+          Toastify({
+            text: "User doesn't exist!",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+          localStorage.setItem("notRegisterNumber",num);
+          setTimeout(() => {
+            if (params.get("checkout")) {
+                window.location = "./Register.html?buynow=true";
+              } else window.location.href = "./Register.html";
+          }, 2000);
+        } else {
+          Toastify({
+            text: "Unable to login",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+    loginMob.addEventListener("click", async function () {
+      let password = document.querySelector("#password-inp-mob").value;
+      console.log(password);
+      let num = document.querySelector(".sign-input-sm").value;
+      try {
+        let data = await customerLogin(num, password);
+
+        if (data.status === "success") {
+          const user = await fetch(
+            config.backendEndpoint + `/customer_info`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                token: `${data.token}`,
+              },
+            }
+          );
+          let userData = await user.json();
+
+          if (userData.status === "success") {
+            localStorage.setItem("user", userData.data.token);
+            Toastify({
+              text: "Logged In Successfully",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "#32cd32",
+              },
+            }).showToast();
+            setTimeout(function () {
+              if (params.get("checkout")) {
+                window.location = "./Checkout.html?buynow=true";
+              } else window.location.href = "/";
+            }, 500);
+          }
+        } else if (data.msg == "Customer does not exists!") {
+          Toastify({
+            text: "User doesn't exist!",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+          localStorage.setItem("notRegisterNumber",num);
+          setTimeout(() => {
+            if (params.get("checkout")) {
+                window.location = "./Register.html?buynow=true";
+              } else window.location.href = "./Register.html";
+          }, 2000);
+        } else {
+          Toastify({
+            text: "Unable to login",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
+    async function otpLogin(num, otp) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/customer_login`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              customer_no: `${num}`,
+              OTP: `${otp}`,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    loginOTP.addEventListener("click", async function() {
+      let otp1 = document.querySelector("#otp1").value;
+      let otp2 = document.querySelector("#otp2").value;
+      let otp3 = document.querySelector("#otp3").value;
+      let otp4 = document.querySelector("#otp4").value;
+      let num = document.querySelector(".sign-input-lg").value;
+      let otp = Number(`${otp1}${otp2}${otp3}${otp4}`)
+      console.log(num, otp);
+      try {
+        let data = await otpLogin(num, otp);
+        if (data.status === "success") {
+          const user = await fetch(
+            config.backendEndpoint + `/customer_info`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                token: `${data.token}`,
+              },
+            }
+          );
+          let userData = await user.json();
+
+          if (userData.status === "success") {
+            localStorage.setItem("user", userData.data.token);
+            Toastify({
+              text: "Logged In Successfully",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "#32cd32",
+              },
+            }).showToast();
+            setTimeout(function () {
+              if (params.get("checkout")) {
+                window.location = "./Checkout.html?buynow=true";
+              } else window.location.href = "/";
+            }, 500);
+          }
+        } else {
+          Toastify({
+            text: "Unable to login",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
+    
+
+    loginOTPM.addEventListener("input", async function () {
+      let otp1 = document.querySelector("#otp1M").value;
+      let otp2 = document.querySelector("#otp2M").value;
+      let otp3 = document.querySelector("#otp3M").value;
+      let otp4 = document.querySelector("#otp4M").value;
+      let num = document.querySelector(".sign-input-sm").value;
+      let otp = Number(`${otp1}${otp2}${otp3}${otp4}`)
+      console.log(num, otp);
+      try {
+        let data = await otpLogin(num, otp);
+        if (data.status === "success") {
+          const user = await fetch(
+            config.backendEndpoint + `/customer_info`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                token: `${data.token}`,
+              },
+            }
+          );
+          let userData = await user.json();
+
+          if (userData.status === "success") {
+            localStorage.setItem("user", userData.data.token);
+            Toastify({
+              text: "Logged In Successfully",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "#32cd32",
+              },
+            }).showToast();
+            setTimeout(function () {
+              if (params.get("checkout")) {
+                window.location = "./Checkout.html?buynow=true";
+              } else window.location.href = "/";
+            }, 500);
+          }
+        } else {
+          Toastify({
+            text: "Unable to login",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+  </script>
+
+  <script type="module">
+    let loginScreenM = document.querySelector(".loginScreenM");
+    let continueD = document.querySelector(".continue");
+    let continueSm = document.querySelector(".continue-sm");
+    let MobileForm = document.querySelector(".sign-form-mobile");
+    let contSm = document.querySelector(".option-div-cont-sm");
+    let loginbtnM = document.querySelector(".loginbtnM");
+    let otpM = document.querySelector(".otpM");
+    let otpResendM = document.querySelector(".otpResendM");
+    let params1 = new URLSearchParams(window.location.search);
+    
+    let otpScreenMobile = document.querySelector(".otpScreen-Mobile");
+    let RegisterNumbermob = document.querySelector(".registered-Numbermob");
+    let mobileform = document.querySelector(".mobile-form");
+    let mobileLoginEdit = document.querySelector(".mobile-login-edit");
+    let mobileLoginEdit2 = document.querySelector(".mobile-login-edit2");
+    let mobileLoginFromCross = document.querySelector(".mobile-login-cross");
+
+    mobileLoginEdit.addEventListener("click", showFormMobile);
+    mobileLoginEdit2.addEventListener("click", showFormMobile2);
+    mobileLoginFromCross.addEventListener("click", showFormMobile2);
+    function showFormMobile() {
+      loginScreenM.classList.add("d-none");
+      MobileForm.classList.remove("d-none");
+      mobileform.classList.remove("d-none");
+    }
+    function showFormMobile2() {
+      otpScreenMobile.classList.add("d-none");
+      MobileForm.classList.remove("d-none");
+      mobileform.classList.remove("d-none");
+    }
+
+
+    
+
+    import config from "./conf/index.js";
+
+    async function sendOTP(num) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/send_otp?customer=${num}`,
+          {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            redirect: "follow",
+            referrerPolicy: "no-referrer",
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    continueSm.addEventListener("click", function () {
+      let num = document.querySelector(".sign-input-sm").value.length;
+      if (num < 10 || num > 10) {
+        Toastify({
+          text: "Invalid Number",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+      } else {
+        continueSm.style.display = "none";
+        contSm.classList.add("d-flex");
+      }
+    });
+
+
+    // login with password
+    loginbtnM.addEventListener("click", () => {
+      mobileform.classList.add("d-none");
+      MobileForm.classList.add("d-none");
+      loginScreenM.classList.remove("d-none");
+      loginScreenM.classList.add("d-block");
+      otpScreenMobile.classList.add("d-none");
+      $(".number_sm").html(`+91-`+$(".sign-input-sm").val());
+    });
+    // login with otp
+    otpM.addEventListener("click", async () => {
+      let num = document.querySelector(".sign-input-sm").value;
+      const res = await sendOTP(num);
+      if (res.status === "success" && num.length > 0) {
+        Toastify({
+          text: "OTP SENT ",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#32cd32",
+          },
+        }).showToast();
+        RegisterNumbermob.innerText = "+91-" + num;
+        otpM.innerText = "Resend OTP";
+        mobileform.classList.add("d-none");
+        MobileForm.classList.add("d-none");
+        otpScreenMobile.classList.remove("d-none");
+        otpScreenMobile.classList.add("d-block");
+        loginScreenM.classList.add("d-none");
+      }else{
+        Toastify({
+          text: "User doesn't exist!",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+        localStorage.setItem("notRegisterNumber",num);
+        setTimeout(() => {
+            if (params1.get("checkout")) {
+                window.location = "./Register.html?buynow=true";
+              } else window.location.href = "./Register.html";
+          }, 2000);
+      }
+    });
+
+    // Resend OTP
+    otpResendM.addEventListener("click", async () => {
+      let num = document.querySelector(".sign-input-sm").value;
+      const res = await sendOTP(num);
+      if (res.status === "success" && num.length > 0) {
+        Toastify({
+          text: "OTP SENT ",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#32cd32",
+          },
+        }).showToast();
+      }
+      RegisterNumbermob.innerText = "+91-" + num;
+      otpM.innerText = "Resend OTP";
+      mobileform.classList.add("d-none");
+      MobileForm.classList.add("d-none");
+      otpScreenMobile.classList.remove("d-none");
+      otpScreenMobile.classList.add("d-block");
+      loginScreenM.classList.add("d-none");
+    });
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      let main = document.querySelector(".margin-top-on-scroll-js");
+      if (window.pageYOffset == 0) {
+        document
+          .querySelector(".margin-top-on-scroll-js")
+          .classList.remove("margin-top-on-scroll");
+      }
+      if (window.pageYOffset > 0) {
+        document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+      }
+    });
+  </script>
+  <!--script for mobile end--->
+</body>
+
+</html>

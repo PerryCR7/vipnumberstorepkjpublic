@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <!-- Google tag (gtag.js) -->
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-YR72WNHR7F");
+      </script>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale=1" 
+      />
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="./Assets/orangeLogo.png"
+      />
+      <link rel="apple-touch-icon" href="./Assets/logo.png" />
+      <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+      <link rel="stylesheet" type="text/css" href="./Css/cart.css" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="icon" href="./Assets/vipnumlogore.png" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <title>VIP Mobile Number | Fancy</title>
+    </head>
+  </head>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div class="content-wrapper">
+      <div class="d-none d-lg-block">
+        <!--add navbar-->
+        <div id="nav-placeholder"></div>
+        <script>
+          $(document).ready(function () {
+            $("#nav-placeholder").load("./Template/Navbar.html");
+          });
+        </script>
+        
+        <section>
+          <div class="container">
+            <div class="d-flex flex-column">
+              <h1 class="cart-heading">Shopping Cart</h1>
+              <p class="card-desc mb-2">0 Numbers in Cart</p>
+
+              <div class="cart-details-cont">
+                <figure>
+                  <img
+                    src="./Assets/empty-cart.png"
+                    alt="empty-cart"
+                    style="width: 100%; height: 100%"
+                  />
+                </figure>
+
+                <p class="mt-0">
+                  Your cart is empty. Look's like you haven't added anything to
+                  your cart yet.
+                </p>
+                <a href="./vipNumber">Keep Shopping</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--footer-->
+        <div id="footer-placeholder"></div>
+        <script>
+          $(document).ready(function () {
+            $("#footer-placeholder").load("./Template/Footer.html");
+          });
+        </script>
+        <!--footer end-->
+      </div>
+
+      <div class="d-block d-lg-none">
+        <!--Mobile Nav start-->
+        <div id="MobileNav"></div>
+        <script>
+          $(document).ready(function () {
+            $("#MobileNav").load("./Template/MobileNav.html");
+          });
+        </script>
+        <!--Mobile Nav end-->
+        <section class="margin-top-on-scroll-js">
+          <div class="container">
+            <div class="d-flex flex-column">
+              <h1 class="cart-heading">Shopping Cart</h1>
+              <p class="card-desc mb-2">0 Numbers in Cart</p>
+
+              <div class="cart-details-cont">
+                <figure>
+                  <img
+                    src="./Assets/empty-cart.png"
+                    alt="empty-cart"
+                    style="width: 100%; height: 100%"
+                  />
+                </figure>
+
+                <p class="mt-0">
+                  Your cart is empty. Look's like you haven't added anything to
+                  your cart yet.
+                </p>
+                <a href="./vipNumber" class="fw-bold">Keep Shopping</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Mobile footer-->
+        <div id="mobileFooter">
+          <script>
+            $(document).ready(function () {
+              $("#mobileFooter").load("./Template/MobileFooter.html");
+            });
+          </script>
+        </div>
+        <!---Mobile footer-->
+      </div>
+    </div>
+    <script src="./Js/js/bootstrap.min.js"></script>
+    <script src="./Js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+    <!--script for desktop-->
+    <script>
+      let btn = document.querySelector(".chatButton");
+      let chatBox = document.querySelector(".box");
+      let closeDesktop = document.querySelector(".closeDesktop");
+      btn.addEventListener("click", ShowChatBox);
+      closeDesktop.addEventListener("click", CloseChatBox);
+      function ShowChatBox() {
+        chatBox.classList.remove("d-none");
+      }
+      function CloseChatBox() {
+        chatBox.classList.add("d-none");
+      }
+    </script>
+    <!--script for desktop end-->
+  <script>
+    window.addEventListener("scroll", function () {
+      let main = document.querySelector(".margin-top-on-scroll-js");
+      if (window.pageYOffset == 0) {
+        document
+          .querySelector(".margin-top-on-scroll-js")
+          .classList.remove("margin-top-on-scroll");
+      }
+      if (window.pageYOffset > 0) {
+        document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+      }
+    });
+  </script></body>
+</html>

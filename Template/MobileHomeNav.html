@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="./Assets/orangeLogo.png" />
+  <link rel="apple-touch-icon" href="./Assets/logo.png" />
+  <title>VIP Mobile Number | Fancy</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/release/v6.0.0-beta3/css/all.css" />
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default" disabled
+    href="/css/app-34c216fc2822b17a4662e494f89c8c00.css?vsn=d">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-efa47151693984001d3dd77e57c4acf3.css?vsn=d">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/sharp-solid.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/sharp-solid.css">
+  <style>
+    .account-cont section {
+      border-bottom: 1px solid #ced4da;
+    }
+
+    .account-cont section h6 {
+      color: black;
+    }
+
+    .account-cont section small {
+      color: #70757a;
+      font-size: 0.765rem;
+    }
+
+    .m-icon {
+      font-size: 1.4rem;
+      color: #000;
+      margin-right: 12px;
+    }
+
+    .log-out-btn {
+      padding: 0.4rem 0.8rem;
+      border: 1.5px solid #F9C835;
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="mobile-navbar">
+    <!--Modal Start-->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog m-0">
+        <div class="modal-content" style="height: 100vh">
+          <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLogin"
+            aria-hidden="true"></div>
+          <div class="modal-header justify-content-start align-items-center border-0 px-1">
+            <div class="pt-2">
+              <button type="button" class="btn-close p-0" data-bs-dismiss="modal" aria-label="Close"
+                style="background: none; height: auto; width: 1.5em">
+                <i class="fa-solid fa-left-long" style="font-size: 22px"></i>
+              </button>
+            </div>
+            <h5 class="modal-title ms-3" id="exampleModalLabel1">
+              My Account
+            </h5>
+          </div>
+          <div class="modal-body px-0">
+            <div class="flex-column account-cont">
+              <section class="px-3 pb-1">
+                <div class="d-flex align-items-center">
+                  <figure class="mb-0">
+                    <img src="./Assets/user.png" alt="" style="
+                          width: 3.5rem;
+                          height: 3.5rem;
+                          border-radius: 50%;
+                        " />
+                  </figure>
+                  <button class="p-2 border-0 text-white ms-3" type="button" style="
+                        background: #000;
+                        border-radius: 7px;
+                        width: 60%;
+                        margin-bottom: 10px;
+                      " onclick="Redrict()">
+                    Login / Signup
+                  </button>
+                </div>
+              </section>
+              <section class="px-3 pb-1">
+                <div class="d-flex align-items-center">
+                  <figure class="mb-0">
+                    <img src="./Assets/loginUser.jpg" alt="" style="
+                          width: 3.5rem;
+                          height: 3.5rem;
+                          border-radius: 50%;
+                        " />
+                  </figure>
+                  <div class="d-flex flex-column ms-3 login-data"></div>
+                </div>
+              </section>
+              <section class="d-flex justify-content-between align-items-center px-3 mt-3">
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-box-open m-icon"></i>
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-0">Your Orders</h6>
+                    <small class="mb-1">Check your order</small>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </section>
+              <section class="d-flex justify-content-between align-items-center mt-3 px-3">
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-bell m-icon"></i>
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-0">Notification</h6>
+                    <small class="mb-1">Your order updates</small>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </section>
+              <section class="d-flex justify-content-between align-items-center mt-3 px-3">
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-headset m-icon"></i>
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-0">Customer Care</h6>
+                    <small class="mb-1">Call or Whatsapp</small>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </section>
+              <section class="d-flex justify-content-between align-items-center mt-3 px-3">
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user m-icon"></i>
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-0">Edit Profile</h6>
+                    <small class="mb-1">Check and edit your details</small>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </section>
+              <section class="d-flex justify-content-between align-items-center mt-3 px-3">
+                <div class="d-flex align-items-center ">
+                  <i class="fa-solid fa-gift m-icon"></i>
+                  <div class="d-flex flex-column">
+                    <h6 class="mb-0">Invite Friends and Win</h6>
+                    <small class="mb-1">Share to earn free Vip Number
+                      <i class="fa-solid fa-share-nodes" style="color: #0d6efd"></i></small>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </section>
+
+              <div class="d-flex justify-content-center mt-5">
+                <button class="btn log-out-btn" style="text-transform: uppercase">
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal end-->
+    <div class="w-bg container-fluid p-0" style="background: transparent">
+      <div id="myNav" class="overlay">
+        <div class="d-flex align-items-center justify-content-between px-3 pt-2" style="background: transparent;">
+          <!-- <button
+              class="border-0 d-flex flex-column align-items-center nav-mob-toggler ms-2 bg-white"
+              onclick="callNotifications()"
+            >
+              <span class="fa-solid fa-bars" id="nav-mob-icon"></span>
+              Menu
+            </button> -->
+          <a href="/">
+            <div class="mob-logo-cont pb-1" style="width: 4.5rem">
+              <img src="Assets/BBC-LOGO.svg" style="width: 100%; height: 100%" />
+            </div>
+          </a>
+          <div class="d-flex" style="position: relative;">
+            <!-- <button
+                onclick="window.location = 'sign'"
+                class="border-0 d-flex flex-column align-items-center bg-white text-dark me-2 collapse-none signup-btn"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal1"
+              > -->
+            <button style="position: relative;background-color: transparent !important;" onclick="openNotification()"
+              class="border-0 d-flex flex-column align-items-center bg-white text-dark me-2 collapse-none">
+              <i class="fa-light fa-bell" style="font-size: 1.4rem; color: #000"></i>Notification
+              <span class="cart-count-mobb" style="
+                  font-size: 5px;
+                  position: absolute;
+                  top: 0px;
+                  background-color: rgb(34, 153, 7);
+                  border-radius: 50%;
+                  padding: 0px 2px 1px 1px;
+                  color: white;
+                  left: 28px;
+                  border: 1px solid white;
+                  height: 9px;
+                  width: 8px;
+                "></span>
+            </button>
+
+            <!-- <button
+                class="border-0 d-flex flex-column align-items-center bg-white text-dark me-2 collapse-none logout-btn d-none"
+                onclick="localStorage.removeItem('user'); location.reload()"
+              >
+                <i
+                  class="fa-solid fa-circle-user"
+                  style="font-size: 1.2rem; color: #000"
+                ></i
+                >Logout
+              </button> -->
+            <button style="position: relative;background-color: transparent !important;"
+              class="border-0  d-flex flex-column align-items-center bg-white text-dark"
+              onclick="window.location.href = 'cart1.html'">
+              <!-- <span
+                  style="font-size: 1.2rem; color: #000"
+                  class="fa-solid fa-cart-shopping me-2"
+                ></span> -->
+              <!-- <img style="width: 1.4rem; color: #000" class="fa-solid fa-cart-shopping me-2"
+                src="./Assets/cart-icon.png" alt=""> -->
+              <img style="width: 1.4rem; color: #000" class="fa-solid fa-cart-shopping me-2"
+                src="./Assets/Cart-without.svg" alt="">
+              <!-- <i class="fa-light fa-cart-shopping" style="font-size:1.4rem;color: #000;"></i> -->
+              My Cart
+              <span class="cart-count-mob" style="
+                  font-size: 8px;
+    position: absolute;
+    top: -3px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    right: 1px;
+    border: 1px solid white;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+                ">0</span>
+            </button>
+
+
+            <button class="border-0 ms-2 d-flex flex-column align-items-center nav-mob-toggler bg-white"
+              style="background-color: transparent !important;">
+              <span style="color: #F9C835; font-size: 1.4rem;" class="fa-solid fa-ellipsis-vertical"
+                id="nav-mob-icon"></span>
+              Menu
+            </button>
+          </div>
+        </div>
+
+
+        <div class="p-2 home-nav-search"
+          style="background-color: #fff;padding-bottom: 5px !important;box-shadow: 0 8px 6px -6px #ddd;display: none;">
+          <form class="form-inline mx-auto d-flex mx-auto px-1" style="
+                border: 1px solid grey;
+                border-radius: 20px;
+                width: 100%;
+                padding-left: 0 !important;
+              " id="search_form_mob">
+            <select class="custom-select border-0 text-dark" style="
+                  border-radius: 20px 0 0 20px;
+                  background-color: #fff;
+                  outline: none;
+                  background: #eee;
+                  padding-left: 4px;
+                  color: #0000ff !important;
+                  width: 100px;
+                " id="inputGroupSelect01_mob">
+              <option value="Anywhere" selected>Anywhere</option>
+              <option value="sum_total">Sum Total</option>
+              <option value="starts_with">Starts with</option>
+              <option value="ends_with">Ends with</option>
+              <option value="contains">Contains with</option>
+              <option value="not_contains">Not Contains</option>
+            </select>
+            <input class="form-control border-0" style="border-radius: 20px" type="text" placeholder="Search Number"
+              aria-label="Search" id="search_num_mob" />
+            <a class="btn border-0" type="submit" id="search_btn_mob" style="
+                  background: #fff !important;
+                  color: grey !important;
+                  border-radius: 15px;
+                  display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+                "><i class="fa-solid fa-magnifying-glass"></i></a>
+          </form>
+        </div>
+
+        <div class="overlay-content d-flex openMenu" style="width: 250px;height:auto;position: absolute;top: 0;">
+          <div class="w-100" style="padding:0.7rem 2rem 1.5rem 0.5rem;">
+            <img style="width: 50%;margin: 0px 20px 40px 20px;" alt="" src="Assets/BBC-LOGO.svg">
+            <h4>
+              <a href="./profile.html" class="myAccMob d-none"><span class="fa-solid fa-user me-4"></span>My Profile</a>
+              <a href="/"><span class="fa-solid fa-house me-4"></span>HOME</a>
+              <a href="./vipNumber.html"><span class="fa-solid fa-store me-4"></span>Store</a>
+              <a href="./offer.html"><span class="fa-solid fa-gift me-4"></span>Offers</a>
+              <a href="./Wishlist.html"><span class="fa-solid fa-heart me-4"></span>Wishlist</a>
+
+              <a href="./contactUs.html"><span class="fa-solid fa-phone me-4"></span>Contact us</a>
+              <a href="./About.html"><span class="fa-solid fa-id-badge me-4"></span>About Us</a>
+              <a href="./sign.html" class="signInMob"><span class="fa-solid fa-user me-4"></span>Sign IN</a>
+
+              <a onclick="openNotification()" href="#" class="nav_notifications d-none"><span
+                  class="fa-solid fa-bell me-4"></span>Notifications</a>
+              <a href="orderHistory.html" class="myOrders d-none"><i class="fa-solid fa-arrow-up-short-wide me-4"></i>My Orders</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="d-block d-lg-none">
+    <!-- <button class="chatButtonMobile">
+      <img style="width: 30px;" alt="" src="./Assets/FAQ-icon.svg">
+    </button> -->
+    <div class="boxMobile d-none p-3">
+      <div class="d-flex justify-content-end">
+        <div class="closeMobile">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="d-flex flex-column">
+        <!-- <a href="whatsapp://send/?phone=+91%2077100%2067100&text=Hi!" class="btn btn-primary mt-2">
+          Chat with us <i class="fa-solid fa-comment"></i>
+        </a>
+        <a href="tel:7710067100" class="btn btn-primary mt-2">
+          Contact us <i class="fa-solid fa-phone-flip"></i>
+        </a> -->
+        <div class="myfaq p-3">
+          <h1 style="
+                font-size: 1.2rem;
+                color: #F9C835;
+                font-family: 'Poppins', sans-serif;
+              ">
+            Frequently Asked Questions<i class="fa-solid fa-circle-question"></i>
+          </h1>
+          <div class="accordion accordion-flush" id="accordionFlushExample-sm">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOneMobile">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOneMobile" aria-expanded="false"
+                  aria-controls="flush-collapseOneMobile">
+                  HOW TO GET VIP NUMBER INDIA ?
+                </button>
+              </h2>
+              <div id="flush-collapseOneMobile" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOneMobile" data-bs-parent="#accordionFlushExample-sm">
+                <div class="accordion-body">
+                  <strong>Step 1 </strong>: First you have to choose a fancy mobile number<br>
+                  <strong>Step 2</strong> : Then click on Add Cart button nd fill up the form details and make PAYMENT
+                  Online by debit-card/credit-card/netbanking/paytm/UPI or any wallet<br>
+                  <strong>Step 3 </strong>: Then We will provide you the porting code of that number within 24 hours,
+                  then you have to go to any retail shop(in which operator you want to port that fancy phone number)
+                  then there you have to say that , i want to PORT this number then, they will ask for your Porting
+                  code, your aadhar card and live photo and give you a new fresh sim card of that operator which will
+                  activate on your name within 4-5 days
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwoMobile">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwoMobile" aria-expanded="false"
+                  aria-controls="flush-collapseTwoMobile">
+                  Can I Take Any fancy mobile number Which I Want ?
+                </button>
+              </h2>
+              <div id="flush-collapseTwoMobile" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwoMobile" data-bs-parent="#accordionFlushExample-sm">
+                <div class="accordion-body">
+                  No, You can Take Only Those fancy mobile number Which Are Visible on Website Store Only
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThreeMobile">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreeMobile" aria-expanded="false"
+                  aria-controls="flush-collapseThreeMobile">
+                  How My Payment Will Safe ?
+                </button>
+              </h2>
+              <div id="flush-collapseThreeMobile" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThreeMobile" data-bs-parent="#accordionFlushExample-sm">
+                <div class="accordion-body">
+                  When you Pay For Any vip fancy number then Your Payment will Stay with us Till Number's Activation and
+                  Delivery. After Your Payment you get Bill/Invoice of your Purchase on your Dashboard, If you face any
+                  problm Regarding vip fancy number or Our Service then you can claim through that and take your Money
+                  Back Also.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFourMobile">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFourMobile" aria-expanded="false"
+                  aria-controls="flush-collapseFourMobile">
+                  How Can I Chose Any Specific Totaling of vip fancy number Suggested by My Astrologer ?
+                </button>
+              </h2>
+              <div id="flush-collapseFourMobile" class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFourMobile" data-bs-parent="#accordionFlushExample-sm">
+                <div class="accordion-body">
+                  You Can Take Any Sum of vip mobile number By Using Numerology Search Filter
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Notification POP -->
+  <div id="notification-side-pop" class="notification-side-pop">
+    <div onclick="openNotification()"
+      style="border-bottom: 1px solid #ddd;padding: 7px;padding-left: 14px;font-weight: 600;background-color: #F9C835;height: 3.5rem;align-items: center;display: flex;">
+      <i class="fa-solid fa-arrow-left-long"></i> &nbsp; Notifications (3)
+    </div>
+    <div style="overflow-y:scroll;height:100%;padding-bottom:2rem;">
+      <div style="border-bottom: 1px solid grey">
+        <div style="position: relative; width: 95%;margin: 8px auto;display: flex;">
+          <div style="display: inline-block;vertical-align: middle;margin: auto;">
+            <img style="width: 45px;vertical-align: middle;" alt="" src="./Assets/notification-1.png">
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.1rem;color:green;font-weight: 600;">Your orderDetail (UPC Code)</div>
+            <div style="font-size: .8rem;color:black;">The UPC for your mobile no. 8585856526 is XX199624, valid upto
+              01-07-22 23:59:59. Do not share this UPC with anyone except the recipient operator personnel
+              <span id="notification-dots">...</span><span id="more-notification">The UPC for your mobile no. 8585856526
+                is XX199624, valid upto 01-07-22 23:59:59. Do not share this UPC with anyone except the recipient
+                operator personnel</span>&nbsp;<span style="color: #F9C835;" id="notification-btn-more"
+                onclick="moreNotificationFun()">Read more</span>
+            </div>
+            <span style="font-size: .7rem;color:grey;">1min ago</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-bottom: 1px solid grey">
+        <div style="position: relative; width: 95%;margin: 8px auto;display: flex;">
+          <div style="display: inline-block;vertical-align: middle;margin: auto;">
+            <img style="width: 45px;vertical-align: middle;" alt="" src="./Assets/notification-2.png">
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.1rem;color:green;font-weight: 600;">Order Confirmed !!</div>
+            <div style="font-size: .8rem;color:black;">Order Confirmed!! Your Vanity Number 8585856526 has been booked
+              successfully. You will receive MNP Code shortly. Regards Vipnumberstore.in</div>
+            <span style="font-size: .7rem;color:grey;">5min ago</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid grey">
+        <div style="position: relative; width: 95%;margin: 8px auto;display: flex;">
+          <div style="display: inline-block;vertical-align: middle;margin: auto;">
+            <img style="width: 45px;vertical-align: middle;" alt="" src="./Assets/notification-3.png">
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.1rem;color:green;font-weight: 600;">Your Order Successfully Placed</div>
+            <div style="font-size: .8rem;color:black;">Dear LLEZER , Thank you for chossing us. Your Payment is
+              Confirmed for Vanity Number 8585856526 through online transaction of Rs. 3500.00 Your order is under
+              Approval....</div>
+            <span style="font-size: .7rem;color:grey;">2hrs ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Notification POP -->
+
+  <script>
+    function moreNotificationFun() {
+      var dots = document.getElementById("notification-dots");
+      var moreText = document.getElementById("more-notification");
+      var btnText = document.getElementById("notification-btn-more");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+
+    function openNotification() {
+      let notificationScreen = document.querySelector(".notification-side-pop");
+      if (notificationScreen.classList[1] === "profile-active") {
+        notificationScreen.classList.remove("profile-active")
+        notificationScreen.classList.add("hide")
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+      } else {
+        notificationScreen.classList.add("profile-active")
+        notificationScreen.classList.remove("hide")
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = 'fixed';
+      }
+    }
+  </script>
+  <script>
+    let menuButton = document.querySelector(".nav-mob-toggler");
+    let logoutBtn = document.querySelector(".logout-btn");
+    let signupBtn = document.querySelector(".signup-btn");
+    let overlayDiv = document.querySelector(".overlay-content");
+    let openMenu = document.querySelector(".openMenu");
+    let showMenu = false;
+    // if (localStorage.getItem("user")) {
+    //   logoutBtn.classList.remove("d-none");
+    //   signupBtn.classList.add("d-none");
+    // }
+
+    if (localStorage.getItem("user")) {
+      document.querySelector(".signInMob").classList.add("d-none");
+      document.querySelector(".myAccMob").classList.remove("d-none");
+      document.querySelector(".nav_notifications").classList.remove("d-none");
+      document.querySelector(".myOrders").classList.remove("d-none");
+    }
+    const toggleMenu = () => {
+      let menuBtn = document.getElementById("nav-mob-icon");
+
+      if (showMenu == false) {
+        menuBtn.classList.remove("fa-bars");
+        menuBtn.classList.add("fa-xmark");
+        // overlayDiv.style.width = "auto";
+        // overlayDiv.style.height = "auto";
+        openMenu.classList.add("active");
+        openMenu.classList.remove("hide");
+        showMenu = true;
+      } else {
+        menuBtn.classList.add("fa-bars");
+        menuBtn.classList.remove("fa-xmark");
+        // overlayDiv.style.width = 0;
+        // overlayDiv.style.height = "0";
+        openMenu.classList.remove("active");
+        openMenu.classList.add("hide");
+        showMenu = false;
+      }
+    };
+
+    menuButton.addEventListener("click", toggleMenu);
+  </script>
+  <script>
+    let btnMobile = document.querySelector(".chatButtonMobile");
+    let chatBoxMobile = document.querySelector(".boxMobile");
+    let closeMobile = document.querySelector(".closeMobile");
+    btnMobile.addEventListener("click", ShowChatBoxMobile);
+    closeMobile.addEventListener("click", CloseChatBoxMobile);
+    function ShowChatBoxMobile() {
+      chatBoxMobile.classList.remove("d-none");
+    }
+    function CloseChatBoxMobile() {
+      chatBoxMobile.classList.add("d-none");
+    }
+  </script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+
+    window.addEventListener("scroll", function () {
+      let mobileNav = document.querySelector(".mobile-navbar");
+      if (window.pageYOffset <= 50) {
+        document
+          .querySelector(".mobile-navbar")
+          .classList.remove("fixed-top");
+        document.querySelector(".home-nav-search").style.display = "none";
+      }
+      if (window.pageYOffset > 50) {
+        document.querySelector(".mobile-navbar").classList.add("fixed-top");
+        document.querySelector(".home-nav-search").style.display = "block";
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset <= 85) {
+        document.querySelector(".home-nav-search").style.display = "none";
+        document.querySelector(".w-bg").style.background = "transparent";
+      }
+      if (window.pageYOffset > 85) {
+        document.querySelector(".home-nav-search").style.display = "block";
+        document.querySelector(".w-bg").style.background = "#fff";
+      }
+    });
+
+  </script>
+  <script>
+    const userData = {
+      name: "Vip Number Club",
+      email: "support@vipnumberclub.com",
+      MobileNo: 7710067100,
+    };
+    let UserInfo = document.querySelector(".login-data");
+    let UserName = document.createElement("h5");
+    let mail = document.createElement("p");
+    let Phone = document.createElement("p");
+    UserName.classList.add("mb-0");
+    UserName.innerHTML = userData.name;
+    mail.classList.add("mb-0");
+    mail.innerHTML = userData.email;
+    Phone.classList.add("mb-0");
+    Phone.innerHTML = userData.MobileNo;
+    UserInfo.appendChild(UserName);
+    UserInfo.appendChild(mail);
+    UserInfo.appendChild(Phone);
+  </script>
+  <script>
+    document
+      .getElementById("search_btn_mob")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        if (document.getElementById("search_num_mob").value.length > 0) {
+          window.location = `vipNumber?search_num=${document.getElementById("search_num_mob").value
+            }&search_type=${document.getElementById("inputGroupSelect01_mob").value
+            }`;
+        }
+      });
+    function Redrict() {
+      window.location.href = "./sign.html";
+    }
+    // let mob = screen.width > 700 ? "" : "-mob";
+    setInterval(() => {
+      if (localStorage.getItem("cart").length > 0) {
+        document.querySelector(".cart-count" + mob).innerHTML = JSON.parse(
+          localStorage.getItem("cart")
+        ).length;
+      }
+    }, 400);
+
+    let mobWishlist = screen.width > 700 ? "" : "-mob";
+    setInterval(() => {
+      if (localStorage.getItem("wishlist").length > 0) {
+        document.querySelector(".mobile-wishlist-count").innerHTML = JSON.parse(
+          localStorage.getItem("wishlist")
+        ).length;
+      }
+    }, 400);
+
+
+    document
+      .getElementById("search_form_mob")
+      .addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (document.getElementById("search_num_mob").value.length > 0) {
+          window.location = `vipNumber?search_num=${document.getElementById("search_num_mob").value
+            }&search_type=${document.getElementById("inputGroupSelect01_mob").value
+            }`;
+        }
+      });
+
+
+
+    function callNotifications() {
+      var myHeaders = new Headers();
+      myHeaders.append("token", localStorage.getItem("user"));
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+        requestOptions
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.status == "success") {
+            fetch(
+              `https://vipnumberapi.bigboychoice.com/api/v1/customer/fetch_notifications/1?customer_id=${result.data.customer_id}`
+            )
+              .then((response) => response.json())
+              .then((result) => {
+                if (result.status == "success") {
+                  if (result.total_data > 0) {
+                    $(".fa-bell").removeClass("me-4");
+                    $(".fa-bell").addClass("me-2");
+                    $(".fa-bell").html(
+                      `<span style='font-size: 8px;position: relative; bottom: 13px;background-color: #f9c935;border-radius: 50%;padding: 4px 6px;color:white;right:8px;border:1px solid white'>${result.total_data}</span>`
+                    );
+                  } else {
+                    $(".fa-bell").addClass("me-4");
+                  }
+                }
+              })
+              .catch((error) => console.log("error", error));
+          }
+        });
+    }
+  </script>
+
+  <script>
+    let wishlistArr = localStorage.getItem("wishlist")
+      ? JSON.parse(localStorage.getItem("wishlist"))
+      : [];
+    document.querySelector('.mobile-wishlist-count').innerHTML = wishlistArr.length;
+  </script>
+</body>
+
+</html>

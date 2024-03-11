@@ -1,0 +1,77 @@
+/* @font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat-Regular_d60d904c27aa445d89a0a8e18a1f3fed.ttf);
+} */
+@font-face {
+  font-family: "BalloThambi";
+  src: url(../Fonts/BalooThambi2-Regular.ttf);
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.checkoutBg {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    60deg,
+    rgba(252, 241, 213, 1) 0%,
+    rgba(255, 194, 175, 1) 100%
+  );
+}
+.checkout {
+  width: auto;
+  height: auto;
+  background-color: #ffff;
+  border-radius: 10px;
+}
+.checkout-form .form-label {
+  font-size: 1.3rem;
+}
+.checkout-form .form-control {
+  font-size: 1rem;
+}
+.checkout-form .form-control:focus,
+.checkout-form .form-select:focus {
+  box-shadow: none;
+  border: 2px solid #F9C835;
+}
+.selectedNumber .checkOut-Number {
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-size: 1.4rem;
+}
+.selectedNumber .number-price {
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-size: 1.4rem;
+}
+.OrderSummary .title {
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-size: 1.4rem;
+}
+.details h3 {
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-size: 1.3rem;
+}
+.OrderSummary .btn-primary {
+  background-color: #F9C835 !important;
+  border-color: #F9C835 !important;
+  color: #fafafa !important;
+}
+.OrderSummary .btn {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Baloo Thambi 2", sans-serif;
+}
+.OrderSummary .disclaimer {
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+.OrderSummary .disclaimer a {
+  text-decoration: none;
+  color: #F9C835;
+}

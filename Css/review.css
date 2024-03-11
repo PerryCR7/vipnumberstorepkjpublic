@@ -1,0 +1,348 @@
+/* @font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat-Regular_d60d904c27aa445d89a0a8e18a1f3fed.ttf);
+} */
+@font-face {
+  font-family: "BalloThambi";
+  src: url(../Fonts/BalooThambi2-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+
+body {
+  font-family: "Baloo Thambi 2" !important;
+}
+
+.wrapper {
+  background: linear-gradient(40deg, #F9C835 20%, #f9c935 51%, #F9C835 90%);
+}
+.col1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.col1 .title {
+  font-size: 90px;
+  color: #fafafa;
+}
+.col1 h2 {
+  color: #fafafa;
+  font-size: 20px;
+}
+
+.col2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bannerImage img {
+  height: auto;
+  width: 70%;
+}
+/* review section*/
+.Review {
+  background-color: #fafafa;
+}
+.review-title {
+  font-family: var(--font);
+  color: #F9C835 !important;
+}
+.Review .container .row .col {
+  margin-top: 30px;
+}
+.review-para {
+  font-family: var(--font);
+  font-size: 1.2rem;
+  color: #000;
+}
+.Review-sorting {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 55px;
+  margin-bottom: 9px;
+}
+.Review-sorting h2 {
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #f9c935;
+  font-weight: 500;
+}
+.Review-sorting .btn-secondary {
+  background: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  border-color: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  border-radius: 10px;
+}
+.Review-sorting .btn-secondary:hover {
+  background-color: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+}
+.dropdown-menu {
+  border-radius: 10px !important;
+  min-width: 9rem !important;
+  transform: translate3d(0px, 50px, 0px) !important;
+}
+.dropdown-item {
+  font-family: var(--font);
+  color: #000 !important;
+}
+.dropdown-item:hover {
+  background: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  color: #fafafa !important;
+}
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  background: linear-gradient(40deg, #F9C835 20%, #f9c935 51%, #F9C835 90%);
+  border: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  box-shadow: none !important;
+}
+.Review-sorting .btn {
+  font-size: 1rem;
+}
+.back {
+  width: auto;
+  height: auto;
+}
+.back:hover {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-left: 3px solid #F9C835;
+}
+.ReviewByUser {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ReviewByUser .user-image img {
+  width: 40px;
+  height: 40px;
+}
+.ReviewByUser h1 {
+  margin-bottom: 3px !important;
+}
+.ReviewByUser .userName {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #140e38;
+}
+.user .stars .fa-solid {
+  color: rgb(255, 215, 0);
+}
+.back .user-review {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.back p {
+  margin-bottom: 0px !important;
+}
+
+.Review-sorting .dropdown {
+  margin-right: 0rem !important;
+}
+@media screen and (min-width: 786px) and (max-width: 992px) {
+  .col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  .col2 {
+    display: none;
+  }
+  .bannerImage img {
+    display: none;
+  }
+  .back {
+    width: auto;
+    height: auto;
+  }
+
+  .ReviewByUser .user-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .ReviewByUser .userName {
+    font-size: 1.5rem;
+  }
+
+  .back .user-review {
+    font-size: 1rem;
+  }
+  .Review-sorting .dropdown {
+    margin-right: 0rem !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  .col1 .title {
+    font-size: 30px;
+  }
+  .col2 {
+    display: none;
+  }
+  .bannerImage img {
+    display: none;
+  }
+  .back {
+    width: auto;
+    height: auto;
+  }
+  .Review-sorting {
+    margin-top: 20px;
+  }
+  .ReviewByUser .user-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .ReviewByUser .userName {
+    font-size: 1.5rem;
+  }
+  .back .user-review {
+    font-size: 1.3rem;
+  }
+  .Review-sorting .dropdown {
+    margin-right: 0rem !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  .col2 {
+    display: none;
+  }
+  .col1 .title {
+    font-size: 30px;
+  }
+  .col h2 {
+    font-size: 16px;
+  }
+  .review-title {
+    font-size: 1.4rem;
+  }
+  .review-para {
+    font-size: 1rem;
+  }
+  .back {
+    width: auto;
+    height: auto;
+  }
+  .ReviewByUser .user-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .ReviewByUser .userName {
+    font-size: 1.3rem;
+  }
+  .back .user-review {
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+  }
+  .Review .btn .fa-solid {
+    display: none;
+  }
+  .Review-sorting .dropdown {
+    margin-right: 0rem !important;
+  }
+  .bannerImage img {
+    display: none;
+  }
+  .Review-sorting {
+    justify-content: center;
+    align-items: center;
+    margin: 15px 15px !important;
+  }
+}
+
+.star-4::before{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 20px;
+  background-color: #F9C835;
+  border-radius: 5px;
+}
+.star-1::before{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 10px;
+  background-color: #F9C835;
+  border-radius: 5px;
+}
+.review-time{
+  color: grey;
+  font-size: 0.9rem;
+  margin-left: 11px;
+}
+.margin-top-10{
+  margin-top: 15px;
+  font-size: 0.9rem;
+  padding: 0 8px;
+  color: #F9C835;
+}
+.review-card{
+  padding: 20px 10px !important;
+  border-top: 1px solid #dddd;
+}
+.review-like-btn{
+  width: 25px;
+}
+.like-counting{
+  position: absolute;
+  bottom: -4px;
+  bottom: -2px;
+  /* left: 39px; */
+  margin-left: 8px;
+}

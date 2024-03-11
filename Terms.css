@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Thambi 2";
+}
+/* :root {
+  --font: "Poppins", sans-serif;
+} */
+
+.term p {
+  font-family: var(--font);
+  font-size: 18px;
+}
+.sub-section h2 {
+  font-family: var(--font);
+  text-transform: uppercase;
+  /* color: #F9C835; */
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+.term-img-cont{
+  height:30vh;
+  width: 100%;
+  overflow: hidden;
+}
+.font-size-term-heading{
+  font-size: 22px;
+}
+.sub-section p {
+  font-size: 16px;
+}
+
+#nav-placeholder{
+  display: block;
+  }
+
+  @media screen and (min-width:650px){
+    .term{
+      width: 80%;
+      margin: auto;
+    }
+    .sub-section h2 {
+      font-size: 19px;
+    }
+    .sub-section p {
+      font-size: 17px;
+    }
+    .font-size-term-heading{
+      font-size: 30px;
+    }
+  }
+
+
+  

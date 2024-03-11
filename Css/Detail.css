@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e6e6e6 !important;
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+.number-card {
+  width: auto;
+  height: auto;
+}
+.number-card .btn-primary {
+  background-color: rgb(21, 30, 82);
+  border-color: rgb(21, 30, 82);
+  color: #fafafa;
+}
+.number-card .btn-primary:hover {
+  background-color: rgb(21, 30, 82);
+  border: none !important;
+}
+.number-card .btn {
+  text-transform: uppercase;
+  color: #fafafa;
+}
+.number-card .btn .fa-solid {
+  color: #fafafa;
+}
+.detial-title {
+  text-align: start;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.number-details h3 {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+#carouselExampleControls-Details .carousel-inner .number-card {
+  width: 23vw;
+}
+#carouselExampleControls-Details .carousel-inner {
+  position: static !important;
+}
+#carouselExampleControls-Details {
+  position: static !important;
+}
+#carouselExampleControls-Details .carousel-control-prev {
+  background-color: #f9c935 !important;
+  width: 40px !important;
+  height: 40px !important;
+  left: 85% !important;
+}
+#carouselExampleControls-Details .carousel-control-next {
+  background-color: #f9c935 !important;
+  width: 40px !important;
+  height: 40px !important;
+  right: 5%;
+}
+#carouselExampleControls-Details .carousel-control-next,
+#carouselExampleControls-Details .carousel-control-prev {
+  opacity: 100% !important;
+  top: 12px;
+}
+#carouselExampleControls-Details
+  .carousel-inner
+  .number-card
+  .btn-primary:hover {
+  background-color: #f9c935;
+  border: none !important;
+}
+@media screen and (min-width: 786px) and (max-width: 992px) {
+  .number-card {
+    width: 50vw;
+    height: auto;
+  }
+
+  .detial-title {
+    font-size: 1.4rem;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card {
+    width: auto;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next,
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    opacity: 100% !important;
+    top: -50px !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    background-color: #f9c935 !important;
+    width: 40px !important;
+    height: 40px !important;
+    left: 85% !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next {
+    background-color: #f9c935 !important;
+    width: 40px !important;
+    height: 40px !important;
+    right: 2%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .number-card {
+    width: 70vw;
+    height: auto;
+  }
+  .detial-title {
+    font-size: 1.4rem;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card {
+    width: auto;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    left: 75% !important;
+    margin-bottom: 10px !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next {
+    margin-bottom: 10px !important;
+  }
+  .card-Carousel .title {
+    font-size: 2rem !important;
+  }
+  .other-details h2 {
+    font-size: 0.8rem;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next,
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    top: -62px !important;
+    opacity: 100% !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    background-color: #f9c935 !important;
+    width: 30px !important;
+    height: 30px !important;
+    left: 80% !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next {
+    background-color: #f9c935 !important;
+    width: 30px !important;
+    height: 30px !important;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .number-card {
+    width: 90vw;
+    height: auto;
+  }
+  .detial-title {
+    font-size: 1.4rem;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card {
+    width: auto;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card .number {
+    font-size: 20px;
+  }
+  #carouselExampleControls-Details-Mobile
+    .carousel-inner
+    .number-card
+    .other-details
+    h2 {
+    font-size: 10px;
+  }
+  #carouselExampleControls-Details-Mobile
+    .carousel-inner
+    .number-card
+    .btn-primary {
+    font-size: 13px;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card .price {
+    font-size: 1rem;
+  }
+  .other-details h2 {
+    font-size: 1rem;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    left: 35% !important;
+    background-color: #f9c935 !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next {
+    left: 50%;
+    background-color: #f9c935 !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner .number-card {
+    width: auto;
+  }
+  .card-Carousel .title {
+    font-size: 2rem !important;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-inner {
+    margin-top: 70px;
+  }
+  #carouselExampleControls-Details-Mobile .carousel-control-next,
+  #carouselExampleControls-Details-Mobile .carousel-control-prev {
+    top: -52px !important;
+    opacity: 100% !important;
+  }
+  #carouselExampleControls-Details-Mobile .number-card .Similar-link {
+    font-size: 12px;
+  }
+  #carouselExampleControls-Details-Mobile .number-card .mx-1 {
+    margin-left: 0.15rem !important;
+    margin-right: 0.15rem !important;
+  }
+  .bg-cont .col-div-2 h1 {
+    font-size: 1.7rem !important;
+  }
+  .col-div-3 {
+    font-size: 7.8px;
+  }
+  .number-card h4 {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="./Assets/orangeLogo.png" />
+  <link rel="apple-touch-icon" href="./Assets/logo.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>VIP Mobile Number | Fancy</title>
+  <style>
+    #myAccountDetails {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="DesktopNav">
+    <!-- <section
+        style="
+          background: linear-gradient(
+            40deg,
+            #F9C835 20%,
+            #f9c935 51%,
+            #F9C835 90%
+          );
+        "
+        id="header"
+      >
+        <div class="container nav-top p-3">
+          <div
+            class="d-flex justify-content-between align-items-center w-100"
+            style="color: white"
+          >
+            <div class="d-flex align-items-center">
+              <div class="icon-wrap-cont">
+                <a
+                  href="whatsapp://send/?phone=+91%2077100%2067100&text=Hi!"
+                  style="color: white"
+                >
+                  <i class="fa-solid fa-phone icon mx-2"></i>+91 77100 67100
+                </a>
+              </div>
+            </div>
+            <div class="d-flex align-items-center ms-4">
+              <div
+                class="icon-wrap-cont"
+                style="
+                  margin-left: 30px;
+                  background-color: white;
+                  padding: 5px 5px;
+                  border-radius: 5px;
+                "
+              >
+                <a
+                  href="./sign"
+                  style="font-size: 13px; color: #f9c935; font-weight: bold"
+                  class="logout"
+                  ><span class="fa-solid fa-user me-2"></span>Login / Signup</a
+                >
+              </div>
+              <div class="d-flex align-items-center ms-4">
+                <div>Follow Us</div>
+                <div class="d-flex align-items-center ms-3">
+                  <a
+                    href="https://www.facebook.com/ViP-Number-Club-633811640408412/"
+                    style="color: white"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://twitter.com/VipNumberClub?t=kisV3II8-mVLAmLC68jfyw&s=08"
+                    style="color: white"
+                    ><i class="fa-brands fa-twitter px-3"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/vipnumberclub/"
+                    style="color: white"
+                  >
+                    <i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.snapchat.com/add/vipnumberclub?share_id=wj4CI44_FvE&locale=en-IN"
+                    style="color: white"
+                    ><i class="fa-brands fa-snapchat px-3"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    <header>
+      <!-- box-shadow: grey 0px 8px 6px -6px !important; -->
+      <nav class="laptop-nav navbar navbar-expand-lg d-none d-lg-block py-0" id="navbar-top"
+        style="background: white; z-index: 450;background: transparent;">
+        <div class="container-fluid px-2" data-aos="fade-right" style="padding: 10px 10px">
+          <a class="navbar-brand ms-3" href="/">
+            <div>
+              <img src="Assets/BBC-LOGO.svg" style="height: 50px; width: auto" />
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa-solid fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" style="justify-content: space-between;margin-left: 50px;" id="navbarNav">
+            <div>
+              <form style="background: #fff;display: none !important;" class="laptop-nav-search form-inline my-2 my-lg-0 mx-auto d-flex" id="search_form">
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option value="Anywhere" selected>Anywhere</option>
+                  <option value="sum_total">Sum Total</option>
+                  <option value="starts_with">Starts with</option>
+                  <option value="ends_with">Ends with</option>
+                  <option value="contains">Contains with</option>
+                  <option value="not_contains">Not Contains</option>
+                </select>
+
+                <input class="form-control mr-sm-2" type="search" placeholder="Search number" aria-label="Search"
+                  id="search_num" />
+                <button class="btn btn-outline-danger my-2 my-sm-0">
+                  <i class="fa-solid fa-magnifying-glass" style="color: grey !important"></i>
+                </button>
+              </form>
+            </div>
+            <ul class="navbar-nav me-3" data-aos="fade-right" style="align-items: center;">
+
+              <li class="nav-item">
+                <a class="nav-link" href="/"><i style="color: #000 !important;" class="fa-regular fa-house me-1"></i>Home</a>
+                <!-- <span class="navbar-list-bottom">Home</span> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./vipNumber.html"><i style="color: #000 !important;" class="fa-regular fa-store me-1"></i>Store</a>
+                <!-- <span class="navbar-list-bottom">New Collection</span> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./offer.html"><i style="color: #000 !important;" class="fa-regular fa-gift me-1"></i>Offers</a>
+                <!-- <span class="navbar-list-bottom">Only For You</span> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Wishlist.html"><i style="color: #000 !important;" class="fa-regular fa-heart me-1"></i>Wishlist</a>
+                <!-- <span class="navbar-list-bottom">Your Favorite</span> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contactUs.html"><i style="color: #000 !important;" class="fa-regular fa-phone me-1"></i>Contact</a>
+                <!-- <span class="navbar-list-bottom">Need Our Help</span> -->
+              </li>
+              <!-- Cart -->
+              <div class="nav-item" style="
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    cursor: pointer;
+                  " onclick="window.location = 'cart1.html'">
+                <a class="nav-link" style="display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;">
+                  <img class="laptop-cart-icon" style="color: #000" class=""
+                  src="./Assets/Cart-without.svg" alt="">
+                  <!-- <span style="color: #000" class="fa-light fa-cart-shopping"> -->
+                    <span
+                      class="cart-count" style="
+                          position: absolute;
+                          bottom: 10px;
+                          background-color: red;
+                          border-radius: 50%;
+                          padding: 4px 6px;
+                          color: white;
+                          left: 14px;
+                          border: 1px solid white;
+                          font-size: 8px;
+                          height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+                        "></span></span> &nbsp; My Cart</a>
+                <!-- <span class="navbar-list-bottom">My Cart</span> -->
+              </div>
+
+              <!-- <li class="nav-item d-flex flex-column align-items-center">
+                  <a class="nav-link" href="./About"
+                    ><i class="fa-solid fa-id-badge me-1"></i>About</a
+                  >
+                </li> -->
+              <li class="nav-item" id="profileSection" style="border: 1px solid yellow; border-radius: 5px; padding:5px 7px !important;">
+                <!-- <a class="nav-link" href="./sign.html"><i style="color: #000 !important;" class="fa-regular fa-user me-1"></i>Login</a> -->
+                <span class="nav-link"><i style="color: #000 !important;" class="fa-regular fa-user me-1"></i>My Account</span>
+              </li>
+              <li class="nav-item logout-per" style="border: 1px solid yellow; border-radius: 5px; padding:5px 7px !important;">
+                <a class="logout nav-link" href="./sign.html"><i style="color: #000 !important;" class="fa-regular fa-user me-1"></i>Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div style="
+          width: 300px;
+          box-shadow: 0px 0px 10px lightgrey;
+          position: fixed;
+          right: 20px;
+          top: 65px;
+          padding: 15px 20px;
+          z-index: 1111;
+          background-color: white;
+          border-radius: 7px;
+        " id="myAccountDetails">
+      <div onclick="window.location = './profile.html'" style="cursor: pointer">
+        My profile
+      </div>
+      <hr style="border-top: 1px solid grey" />
+      <div onclick="window.location = './orderHistory.html'" style="cursor: pointer">
+        My order history
+      </div>
+      <hr style="border-top: 1px solid grey" />
+      <div onclick="window.location = './notification.html'" style="cursor: pointer">
+        Notification
+      </div>
+      <hr style="border-top: 1px solid grey" />
+      <div style="cursor: pointer" class="text-danger" onclick="localStorage.removeItem('user'); location.reload()">
+        Logout
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+
+    let mob = screen.width > 700 ? "" : "-mob";
+    setInterval(() => {
+      if (localStorage.getItem("cart").length > 0) {
+        document.querySelector(".cart-count").innerHTML = JSON.parse(
+          localStorage.getItem("cart")
+        ).length;
+      }
+    }, 400);
+
+    if (localStorage.getItem("user")) {
+      var myHeaders = new Headers();
+      myHeaders.append("token", localStorage.getItem("user"));
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+      fetch(
+        "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.status == "success") {
+            console.log("Logged In");
+          } else {
+            localStorage.removeItem("user");
+            window.location = "/";
+          }
+        });
+    }
+
+    window.addEventListener("scroll", function () {
+      let nav = document.getElementById("navbar-top");
+      if (window.pageYOffset == 0) {
+        nav.classList.remove("fixed-top");
+        nav.style.boxShadow = "none";
+        nav.style.zIndex = 450
+        document.getElementById("myAccountDetails").style.top = "65px";
+      }
+      if (window.pageYOffset > 0) {
+        nav.classList.add("fixed-top");
+        nav.style.boxShadow = "0 8px 6px -6px grey";
+        document.getElementById("myAccountDetails").style.top = "65px";
+      }
+    });
+
+    // window.addEventListener("scroll", function () {
+    //   if((window.location.href).split('.com')[1] == "/" || (window.location.href).split('.com')[1] == ""){
+    //     if (window.pageYOffset <= 85) {
+    //       document.querySelector(".laptop-nav-search").style.display = "none";
+    //       document.querySelector(".laptop-nav-search").classList.remove("d-flex");
+    //     }
+    //     if (window.pageYOffset > 85) {
+    //       document.querySelector(".laptop-nav-search").classList.add("d-flex");
+    //       document.querySelector(".laptop-nav-search").style.display = "block";
+    //     }
+    //   }
+    //   // if(window.location.href === "https://localhost/vipnumberstore-frontend/"){
+    //   //   if (window.pageYOffset <= 85) {
+    //   //     document.querySelector(".laptop-nav-search").style.display = "none";
+    //   //     document.querySelector(".laptop-nav-search").classList.remove("d-flex");
+    //   //   }
+    //   //   if (window.pageYOffset > 85) {
+    //   //     document.querySelector(".laptop-nav-search").classList.add("d-flex");
+    //   //     document.querySelector(".laptop-nav-search").style.display = "block";
+    //   //   }
+    //   // }
+    // });
+    // if(window.location.href !== "https://localhost/vipnumberstore-frontend/"){
+    //       document.querySelector(".laptop-nav-search").style.display = "block";
+    // }
+    if((window.location.href).split('.com')[1] != "/"){
+      document.querySelector(".laptop-nav-search").classList.add("d-flex");
+      document.querySelector(".laptop-nav-search").style.display = "block";
+    }else{
+      document.querySelector(".laptop-nav-search").classList.remove("d-flex");
+      document.querySelector(".laptop-nav-search").style.display = "none";
+    }
+
+  </script>
+  <!--script to add logout button-->
+  <script>
+    let logout = document.querySelector(".logout");
+    let logoutPer = document.querySelector(".logout-per");
+    val = localStorage.getItem("user");
+    // console.log(val.token)
+    // console.log(logout)
+    if (val) {
+      logoutPer.style.display = "none";
+      logout.innerHTML = "Log Out";
+      logout.setAttribute("href", "/");
+    }
+    logout.addEventListener("click", () => {
+      localStorage.clear();
+    });
+    if (!localStorage.getItem("cart"))
+      localStorage.setItem("cart", JSON.stringify([]));
+
+    document.getElementById("search_form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (document.getElementById("search_num").value.length > 0) {
+        window.location = `vipNumber?search_num=${document.getElementById("search_num").value
+          }&search_type=${document.getElementById("inputGroupSelect01").value}`;
+      } else window.location = `vipNumber`;
+    });
+
+    document
+      .getElementById("profileSection")
+      .addEventListener("mouseover", () => {
+        $("#myAccountDetails").show();
+      });
+    document
+      .getElementById("profileSection")
+      .addEventListener("mouseleave", () => {
+        $("#myAccountDetails").hide();
+      });
+    document
+      .getElementById("myAccountDetails")
+      .addEventListener("mouseover", () => {
+        $("#myAccountDetails").show();
+      });
+    document
+      .getElementById("myAccountDetails")
+      .addEventListener("mouseleave", () => {
+        $("#myAccountDetails").hide();
+      });
+
+    if (!localStorage.getItem("user")) $("#profileSection").hide();
+  </script>
+  <!--script for logout button end-->
+</body>
+
+</html>

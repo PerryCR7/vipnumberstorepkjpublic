@@ -1,0 +1,62 @@
+/* @font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat-Regular_d60d904c27aa445d89a0a8e18a1f3fed.ttf);
+} */
+@font-face {
+    font-family: "Baloo Thambi 2";
+    src: url(../Fonts/BalooThambi2-Regular.ttf);
+  }
+  button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+  
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+    
+}
+.brand-icon-cont a{
+padding:0.4rem 0.6rem 0.2rem 0.6rem;
+}
+
+.contact-form button,.brand-icon-cont a{
+    background: linear-gradient( 40deg, #F9C835 20%, #f9c935 51%, #F9C835 90% );
+    color: white;
+}
+
+.bg-img-cont{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.bg-img-cont img{
+    object-fit: cover;
+    height: auto;
+    width:100%
+}
+.contact-form button{
+    border: none;
+    padding:0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 1.2px;
+}
+li{
+    list-style-type: none;
+}
+body{
+  font-family: 'Baloo Thambi 2';
+  width: 100%;
+  height: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:440px){
+    
+}

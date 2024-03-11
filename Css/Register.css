@@ -1,0 +1,120 @@
+/* @font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat-Regular_d60d904c27aa445d89a0a8e18a1f3fed.ttf);
+} */
+@font-face {
+  font-family: "BalloThambi";
+  src: url(../Fonts/BalooThambi2-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.RegisterBg {
+  width: 100vw;
+  /* height: 100vh; */
+  /* background: linear-gradient(
+    60deg,
+    rgba(252, 241, 213, 1) 0%,
+    rgba(255, 194, 175, 1) 100%
+  ); */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  /* align-items: center; */
+}
+/* input#search {
+  background-image: url(../Assets/bulb-red.jpg);
+  background-repeat: no-repeat;
+  text-indent: 20px;
+} */
+.Register {
+  width: 70vw;
+  height: auto;
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+.register-title {
+  font-size: 2rem;
+  font-family: "Baloo Thambi 2", sans-serif;
+  /* color: #F9C835; */
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: inline-block;
+  border-bottom: 1px solid #F9C835;
+}
+.register-lg-form .form-label,
+.resgiter-form-sm .form-label,
+.register-form .form-control .register-form .form-select,
+.register-form-sm .form-control .register-form-sm .form-select {
+  font-size: 1rem;
+  font-family: "Baloo Thambi 2", sans-serif;
+}
+.register-lg-form .form-control:focus,
+.register-form .form-select:focus,
+.register-form-sm .form-control:focus,
+.register-form-sm .form-select:focus {
+  border: 2px solid #F9C835 !important;
+  box-shadow: none !important;
+}
+.register-lg-form .btn-primary,
+.register-form-sm .btn-primary {
+  width: auto;
+  background-color: #F9C835 !important;
+  border-color: #F9C835 !important;
+  margin-left: 5px;
+}
+.register-lg-form .btn,
+.register-form-sm .btn {
+  color: #fafafa;
+  text-transform: uppercase;
+  font-family: "Baloo Thambi 2", sans-serif;
+}
+.register-lg-form .btn-primary:focus,
+.register-form-sm .btn-primary:focus {
+  box-shadow: none !important;
+  background-color: #F9C835 !important;
+}
+.form-illu{
+  width: 180px;
+  background-color: red;
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .Register {
+    width: auto;
+    height: auto;
+  }
+  .register-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .RegisterBg {
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .Register {
+    width: auto;
+    height: auto;
+  }
+  .register-title {
+    font-size: 1.3rem;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+}
+@media screen and (min-width: 600px){
+  .form-illu{
+    width: 300px;
+    margin-left: 4rem;
+  }
+}

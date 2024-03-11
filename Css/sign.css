@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+.p-4.pb-10{
+  padding-bottom: 2.5rem !important;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    60deg,
+    rgba(252, 241, 213, 1) 0%,
+    rgba(255, 194, 175, 1) 100%
+  );
+}
+.option-div-cont {
+  display: none;
+}
+.sign-container {
+  width: auto;
+  height: auto;
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.image-column img {
+  width: 25vw;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.sign-section .link-title {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  color: #494949;
+}
+.sign-section .btn-primary {
+  background: linear-gradient(
+    40deg,
+    #F9C835 20%,
+    #f9c935 51%,
+    #F9C835 90%
+  ) !important;
+  border-color: #F9C835 !important;
+  width: 10vw;
+  height: 7vh;
+  border-radius: 5px;
+}
+.sign-section .btn-primary:focus {
+  box-shadow: none;
+}
+.sign-section .btn {
+  font-size: 1rem;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+.welcome-message h2 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+.welcome-message p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #494949;
+  margin-top: 15px;
+}
+.sign-form {
+  margin-top: 50px;
+}
+.sign-form .form-label,
+.sign-form-mobile .form-label {
+  font-family: "Poppins";
+  color: #000;
+  font-size: 1rem;
+}
+.sign-form .form-control,
+.sign-form-mobile .form-control {
+  font-family: "Poppins";
+  border: 2px solid #F9C835 !important;
+}
+.sign-form .form-control,
+.sign-form-mobile .form-control:focus {
+  box-shadow: none !important;
+}
+.sign-form .btn {
+  width: 100%;
+}
+.sign-section h3 {
+  font-size: 1rem;
+  color: #494949;
+  font-family: "Poppins";
+  margin-top: 20px;
+}
+.sign-section h3 a {
+  text-decoration: none;
+  color: #F9C835;
+}
+.hide {
+  display: none;
+}
+
+.otpScreen,
+.otpScreen-Mobile,
+.loginScreenM {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+.loginScreenM.p-3{
+  padding: 0px !important;
+  margin-top: 2rem !important;
+}
+
+.otpScreen .otp-title,
+.otpScreen-Mobile .otp-title {
+  font-family: "Poppins";
+  font-size: 1.3rem;
+}
+.otpScreen input,
+.otpScreen-Mobile input {
+  width: 40%;
+  padding: 2px 4px;
+  border: 1px solid #f44b01;
+}
+.otpScreen,
+.otpScreen-Mobile .resend-link,
+.otpScreen a,
+.otpScreen-Mobile a {
+  text-decoration: none;
+  color: #f44b01;
+  font-family: "Poppins";
+}
+.otpScreen .message,
+.otpScreen-Mobile .message {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+}
+.otpScreen a:hover,
+.otpScreen-Mobile a:hover {
+  color: #f44b01;
+}
+
+.option-div {
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #F9C835;
+  border-radius: 20px;
+  font-weight: 600;
+  background: #F9C835;
+  color: #fafafa;
+  cursor: pointer;
+}
+.login-screen-lg {
+  padding: 15px 15px 10px 15px;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+.new-ntn{
+  width: 100%;
+  background-color: #f9c935 !important;
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 0;
+}
+@media screen and (max-width: 363px){
+  .option-div.font-size-gmoto{
+    font-size: .7rem !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sign-container {
+    width: 80vw;
+    height: auto;
+  }
+
+  .sign-section .link-title {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .sign-section .btn-primary {
+    width: 10vw;
+    height: auto;
+  }
+  .welcome-message p {
+    font-size: 1.4rem !important;
+  }
+  .welcome-message h2 {
+    font-size: 2rem;
+  }
+  .welcome-message p {
+    font-size: 1rem;
+  }
+
+  .option-div {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 786px) and (max-width: 992px) {
+  .sign-container {
+    width: auto;
+    height: auto;
+  }
+  .sign-section .link-title {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .sign-section .btn-primary {
+    width: auto;
+    height: auto;
+  }
+  .welcome-message p {
+    font-size: 1.4rem !important;
+  }
+  .welcome-message h2 {
+    font-size: 2rem;
+  }
+  .welcome-message p {
+    font-size: 1rem !important;
+  }
+  .sign-form-mobile .btn-primary {
+    width: 100%;
+  }
+  .otpScreen-Mobile input {
+    width: 6vw;
+    height: 4vh;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  .sign-container {
+    width: auto;
+    height: auto;
+  }
+  .sign-section .link-title {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .sign-section .btn-primary {
+    width: 20vw;
+    height: auto;
+  }
+  .welcome-message p {
+    font-size: 1.4rem !important;
+  }
+  .welcome-message h2 {
+    font-size: 2.4rem;
+  }
+  .welcome-message p {
+    font-size: 1.3rem !important;
+  }
+  .sign-form-mobile .btn-primary {
+    width: 100%;
+  }
+  .otpScreen-Mobile input {
+    width: 6vw;
+    height: 4vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sign-container {
+    width: auto;
+    height: auto;
+  }
+  .sign-section .link-title {
+    font-size: 0.8rem;
+  }
+  .sign-section .btn-primary {
+    width: auto;
+    height: auto;
+    font-size: 10px;
+  }
+  .welcome-message p {
+    font-size: 0.7rem !important;
+  }
+  .welcome-message h2 {
+    font-size: 1rem;
+  }
+  .sign-form-mobile .btn-primary {
+    width: 100%;
+  }
+  .sign-form-mobile .form-label {
+    font-size: 0.8rem;
+  }
+  .sign-form-mobile .form-control {
+    font-size: 0.8rem;
+  }
+  .sign-section h3 {
+    font-size: 0.7rem;
+  }
+  .sign-form-mobile {
+    margin-top: 10px;
+  }
+  .otpScreen-Mobile input {
+    width: 6vw;
+    height: 4vh;
+    border-radius: 2px;
+  }
+  .otpScreen-Mobile .message {
+    font-family: "Poppins";
+    font-size: 0.6rem;
+    margin-top: 5px;
+  }
+  .otpScreen-Mobile a {
+    font-size: 0.8rem;
+  }
+}

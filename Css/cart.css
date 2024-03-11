@@ -1,0 +1,112 @@
+/* @font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat-Regular_d60d904c27aa445d89a0a8e18a1f3fed.ttf);
+} */
+@font-face {
+    font-family: "Baloo Thambi 2";
+    src: url(../Fonts/BalooThambi2-Regular.ttf);
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+   overflow-x: hidden;
+   font-family:'Roboto',sans-serif;
+  }
+
+
+  a{
+    text-decoration: none !important;
+    color: black ;
+}
+
+.cart-heading{
+    font-family: Baloo Thambi 2;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.card-desc{
+    font-family:'Roboto',sans-serif;
+}
+.margin-left-text-banner{
+    margin-left: 0;
+}
+.font-size-text-banner-1{
+    font-size: 1rem;
+}
+.font-size-text-banner-2{
+    font-size: 1.8rem;
+}
+.font-size-text-banner-3{
+    font-size: 1.1rem;
+}
+.font-size-text-banner-4{
+    font-size: 2rem;
+}
+@media screen and (min-width:390px){
+    .margin-left-text-banner{
+        margin-left: 1.5rem;
+    }
+}
+@media screen and (min-width:375px){
+    
+    .font-size-text-banner-1{
+        font-size: 1.1rem;
+    }
+    .font-size-text-banner-2{
+        font-size: 2.1rem;
+    }
+    .font-size-text-banner-3{
+        font-size: 1.2rem;
+    }
+    .font-size-text-banner-4{
+        font-size: 2.3rem;
+    }
+}
+.card-wish-sm-row .cart-details-cont{
+    margin: auto;
+    width: 93%;
+    margin-bottom: 30px;
+}
+.cart-details-cont{
+    box-shadow: 0 0 3px #d1d7dc;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 18px;
+    text-align: center;
+   box-shadow:  6px 6px 25px #c3c3c3,
+             -6px -6px 25px #fdfdfd;
+}
+
+.cart-details-cont figure{
+    width: 25rem;
+}
+.cart-details-cont p{
+    font-size: 1.1rem;
+    font-family: 'Roboto';
+}
+.cart-details-cont a{
+    background-color: #F9C835;
+    color: #000;
+    width: 90%;
+    padding:0.4rem 0.8rem;
+    border:none;
+}
+body{  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+  

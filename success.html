@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YR72WNHR7F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YR72WNHR7F");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./Assets/orangeLogo.png"
+    />
+    <link rel="apple-touch-icon" href="./Assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./Css/vipNumber.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./Css/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/vipnumlogore.png" />
+    <link rel="stylesheet" type="text/css" href="./Css/index3.css" />
+    <link rel="stylesheet" type="text/css" href="./Css/contactUs.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>VIP Mobile Number | Fancy</title>
+  </head>
+  <style>
+    .maindiv {
+      width: 100%;
+      text-align: center;
+      padding: 40px 0;
+      background: #ebf0f5;
+    }
+
+    .success {
+      color: #F9C835;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .success > p {
+      color: #F9C835;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .checkmark {
+      color: #F9C835;
+      font-size: 100px;
+      line-height: 200px;
+      margin-left: -15px;
+    }
+
+    .card {
+      background: white;
+      padding: 60px;
+      border-radius: 4px;
+      box-shadow: 0 2px 3px #c8d0d8;
+      display: inline-block;
+      margin: 0 auto;
+    }
+  </style>
+
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div class="content-wrapper">
+      <div class="d-block d-lg-none">
+        <!--Mobile Nav start-->
+        <div id="MobileNav"></div>
+        <script>
+          $(document).ready(function () {
+            $("#MobileNav").load("./Template/MobileNav.html");
+          });
+        </script>
+        <!--Mobile Nav end-->
+        <div class="maindiv margin-top-on-scroll-js">
+          <div class="card">
+            <div
+              style="
+                border-radius: 200px;
+                height: 200px;
+                width: 200px;
+                background: #F9C83521;
+                margin: 0 auto;
+              "
+            >
+              <i class="checkmark">✓</i>
+            </div>
+            <h1 class="success">Success</h1>
+            <p>
+              We received your purchase request;<br />
+              we'll be in touch shortly!
+            </p>
+          </div>
+        </div>
+        <!--Mobile footer-->
+        <div id="mobileFooter">
+          <script>
+            $(document).ready(function () {
+              $("#mobileFooter").load("./Template/MobileFooter.html");
+            });
+          </script>
+        </div>
+        <!---Mobile footer-->
+      </div>
+
+      <div class="d-none d-lg-block">
+        <!--add navbar-->
+        <div id="nav-placeholder"></div>
+        <script>
+          $(document).ready(function () {
+            $("#nav-placeholder").load("./Template/Navbar.html");
+          });
+        </script>
+        <div class="maindiv">
+          <div class="card">
+            <div
+              style="
+                border-radius: 200px;
+                height: 200px;
+                width: 200px;
+                background: #F9C83521;
+                margin: 0 auto;
+              "
+            >
+              <i class="checkmark">✓</i>
+            </div>
+            <h1 class="success">Success</h1>
+            <p>
+              We received your purchase request;<br />
+              we'll be in touch shortly!
+            </p>
+          </div>
+        </div>
+        <!--footer-->
+        <div id="footer-placeholder"></div>
+        <script>
+          $(document).ready(function () {
+            $("#footer-placeholder").load("./Template/Footer.html");
+          });
+        </script>
+        <!--footer end-->
+      </div>
+    </div>
+    <script src="./Js/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+      localStorage.removeItem("cart");
+    </script>
+    <!--script for desktop-->
+    <script>
+      let btn = document.querySelector(".chatButton");
+      let chatBox = document.querySelector(".box");
+      let closeDesktop = document.querySelector(".closeDesktop");
+      btn.addEventListener("click", ShowChatBox);
+      closeDesktop.addEventListener("click", CloseChatBox);
+      function ShowChatBox() {
+        chatBox.classList.remove("d-none");
+      }
+      function CloseChatBox() {
+        chatBox.classList.add("d-none");
+      }
+      setTimeout(() => {
+        localStorage.removeItem("cart");
+        // window.location = "/";
+      }, 1000);
+    </script>
+    <!--script for desktop end-->
+    <script>
+      window.addEventListener("scroll", function () {
+        let main = document.querySelector(".margin-top-on-scroll-js");
+        if (window.pageYOffset == 0) {
+          document
+            .querySelector(".margin-top-on-scroll-js")
+            .classList.remove("margin-top-on-scroll");
+        }
+        if (window.pageYOffset > 0) {
+          document.querySelector(".margin-top-on-scroll-js").classList.add("margin-top-on-scroll");
+        }
+      });
+    </script>
+  </body>
+</html>

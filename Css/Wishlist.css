@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.wish-head-banner {
+  font-family: "Kaushan Script", cursive;
+}
+.card-wish-row .col-div-3 {
+  font-size: 12px;
+}
+
+.d-grid-custom-flex{
+  display: flex;
+}
+button { touch-action: manipulation; }
+body { touch-action: manipulation; }
+@media screen and (min-width:367px){
+  .d-grid-custom-flex{
+    display: grid;
+    grid-template-columns: 108px 90px 90px 90px;
+  }
+}
+@media screen and (min-width:375px){
+  .d-grid-custom-flex{
+    display: grid;
+    grid-template-columns: 110px repeat(3,1fr);
+  }
+}
+@media screen and (min-width:435px){
+  .d-grid-custom-flex{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let file = new Audio("./Assets/pop-sound.mp3")
+    function play() {
+      file.play()
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Fixed Buttom Navbar -->
+  <div class="d-grid-custom-5  align-items-center w-100 justify-content-center  icon-banner"
+    style="background-color: #fff;z-index: 24;box-shadow: 0px 0px 5px 1px rgb(0 0 0 /20%);
+    -webkit-box-shadow: 0px 0px 5px 1px rgb(0 0 0 /20%);position: fixed;bottom: 0px;height: 59px;border-radius: 20px 20px 0px 0px;">
+    <li class="nav-item " style="height: 100%;">
+      <a style="height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;" href="/"
+        class="nav-link img p-1 font-1rem"><i class="fa-light fa-house-chimney" style="font-size: 1.5rem;"></i>
+        Home</a>
+    </li>
+
+    <li onclick="openCategoryPage()" class="nav-item" style="height: 100%;">
+      <a style="height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;"
+        class="font-1rem img nav-link p-1 category-btn">
+        <i class="fa-light fa-grid-2 category-btn" style="font-size: 1.5rem;"></i>Category</a>
+    </li>
+    <li class="nav-item" style="height: 100%;">
+      <a href="./vipNumber.html"
+        style="height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;"
+        class="font-1rem img nav-link p-1">
+        <i class="fa-light fa-bookmark" style="font-size: 1.5rem;"></i>Store</a>
+    </li>
+    <li class="nav-item" style="height: 100%;">
+      <div onclick="openSubOpthion(true)" onmouseleave="openSubOpthion1()" id="open-sub-opthion"
+        style="height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;"
+        class="font-1rem img nav-link p-1 shadow-none open-sub-opthion">
+        <img alt="" src="./Assets/All-Support-icon.svg">Support
+      </div>
+    </li>
+    <li class="nav-item nav-mob-toggler" style="height: 100%;">
+      <div onclick="openLoginBottom()"
+        style="height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;"
+        class="font-1rem img nav-link p-1 shadow-none"><i class="fa-regular fa-arrow-right-to-arc"
+          style="font-size: 1.5rem;"></i>Login</div>
+    </li>
+  </div>
+  <!-- End Fixed Buttom Navbar -->
+
+
+  <!-- Category Page -->
+  <div style="background-color: transparent;" class="category-page-pop-up">
+    <div>
+      <div onclick="openCategoryPage()"
+        style="width:6rem;font-weight:500;text-align: center;border-radius: 28px 28px 0px 0px;padding: 10px 10px 3px 10px;font-size: 0.9rem;background: #fff;box-shadow: 0px 0px 5px 1px rgb(0 0 0 /20%);">
+        <i class="fa-light fa-grid-2 category-btn" style="font-weight:300;font-size: 1.2rem;"></i><br>Category</a>
+      </div>
+    </div>
+    <div style="padding: 10px 15px 25px 15px;border-top: 1px solid rgb(150, 150, 150);background-color: #fff;">
+      <div style="font-weight: 600;font-size:1.1rem;margin-bottom: 8px;">Category</div>
+      <form class="categoryFilterMobile">
+        <div class="category-page-pop-up-style"></div>
+      </form>
+    </div>
+  </div>
+  <!-- End Category Page -->
+
+  <!-- Profile Side PopUp without login -->
+  <div id="profile-side-pop" class="profile-side-pop">
+    <div class="bg-blur" style="height: 100vh;">
+    <div onclick="openProfile()"
+      style="border-bottom: 1px solid #ddd;padding: 7px;padding-left: 14px;font-weight: 600;">
+      <i class="fa-solid fa-arrow-left-long"></i> &nbsp; My Account
+    </div>
+    <div>
+      <div style="border-bottom: 1px solid #dddd;">
+        <div style="width: 90%;margin: 8px auto;display: flex;align-items: center;">
+          <div style="display: inline-block; background-color: #F9C835; padding: 18px; border-radius: 50%;">
+            <!-- <img style="vertical-align: middle;width: 100%;" alt="" src="./Assets/user.png"> -->
+            <i class="fa-light fa-circle-user" style="font-size: 2.5rem;margin: auto 4px;"></i>
+          </div>
+          <div onclick="loginBottomPopUp()"
+            style="display: inline-block;background-color:#F9C835;padding: 10px 25px;font-weight: 600;font-size: 1.2rem;border-radius: 9px;vertical-align: middle;margin-left: 2rem; width: 60%;text-align: center;">
+            login/Signup</div>
+        </div>
+      </div>
+      <div onclick="window.location='./sign.html'" style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;vertical-align: middle;">
+            <!-- <img style="vertical-align: middle;width: 80%;vertical-align: middle;" alt="" src="./Assets/open-box.png"> -->
+            <i class="fa-light fa-box-open" style="font-size: 1.6rem;margin: auto 4px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+            <div style="font-size: 1.3rem;">My Orders</div>
+            <div style="font-size: .7rem;color:grey;">Check your order</div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #dddd;">
+        <div onclick="openNotification()" style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/bell-icon.png"> -->
+            <i class="fa-light fa-bell" style="font-size: 1.7rem;margin: auto 7px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.3rem;">Notification <img style="width: 34px;position:absolute;top:0;" alt=""
+                src="./Assets/New-png.png"></div>
+            <div style="font-size: .7rem;color:grey;">Your order Updates</div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+      <div style="border-bottom: 1px solid #dddd;">
+        <a style="color: #000;" href="tel:9557953242">
+          <div style="position: relative; width: 95%;margin: 8px auto;">
+            <div style="display: inline-block;width: 10%;vertical-align: middle;">
+              <img style="width: 86%;vertical-align: middle;margin: auto 2px;" alt=""
+                src="./Assets/All-Support-icon.svg">
+            </div>
+            <div style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+              <div style="font-size: 1.3rem;">Customer Care</div>
+              <div style="font-size: .7rem;color:grey;">Call or Whatsapp</div>
+            </div>
+            <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="shareButton1" style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/gift-icon.png"> -->
+            <i class="fa-light fa-gift" style="font-size: 1.7rem;margin: auto 5px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.3rem;">Invite Friends & Win <img style="width: 34px;position:absolute;" alt=""
+                src="./Assets/New-png.png"></div>
+            <div style="font-size: .7rem;color:grey;position: relative;">Share link to Friend & win a chance to Free
+              VIP Number &nbsp;<img style="top: 4px; width: .6rem;position:absolute;vertical-align: middle;" alt=""
+                src="./Assets/share-icon1.png"></div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed-button-width" style="position:absolute;bottom:20px;">
+        <div style="text-align: center;margin-top:.8rem;">
+          <!-- <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/insta-icon.png">
+          <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/fb-icon.png">
+          <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/twitter-icon.png">
+          <img style="width: 20px;height:20px;margin: auto 5px;" alt="" src="./Assets/yt-icon.png"> -->
+          <i class="fa-brands fa-instagram" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-facebook" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-square-twitter" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-youtube" style="font-size: 1.4rem;margin: auto 5px;"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="login-bottom-popup" style="padding-bottom: 30px;">
+      <div style="position: relative; width: 95%;margin: 8px auto;">
+        <div style="display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 15px;">
+          <img style="margin-top: 10px; width: 30%;" alt="" src="./Assets/BBC-LOGO.svg">
+          <i onclick="loginBottomPopUp()" style="font-size: 1.5rem;font-weight: 600;" class="fa-regular fa-x"></i>
+        </div>
+
+        <form class="mt-3 sign-form-mobile sign-form-mobile-otp">
+          <div class="mb-3 mobile-form">
+            <div style="margin-top:30px;" for="Email" class="form-label"><span
+                style="font-size: 1.4rem;font-weight:800;">Login </span> &nbsp;or &nbsp; <span
+                style="font-size: 1.2rem;font-weight:800;">Signup</span></div>
+            <input style="margin-top:15px;border:3px solid rgb(201, 201, 201)" type="email"
+              class="form-control sign-input-sm" placeholder="Enter Your Mobile No" />
+
+            <div class="form-otp d-none" style="margin-top: 12px;">
+              <h4>OTP sent to your mobile number.</h4>
+              <div style="font-size: .9rem;color:#ffbf00;padding:5px;" class="d-flex align-items-center flex-row">
+                <h5 style="font-size: .9rem;background-color:rgb(230 230 230);padding: 0px 5px; "
+                  class="registered-Numbermob mb-1">+91-9530000007</h5>
+              </div>
+              <input type="text" maxlength="1" id="otp1M" max="9" class="inputs"
+                style="text-align: center; width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+              <input type="text" maxlength="1" id="otp2M" max="9" class="inputs"
+                style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+              <input type="text" maxlength="1" id="otp3M" max="9" class="inputs"
+                style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;" />
+              <input type="text" maxlength="1" id="otp4M" max="9"
+                style="text-align: center;width: 35px;height: 35px;border: 1px solid #000;margin-right: 10px;"
+                class="inputs" />
+              <button
+                style="margin-top: 20px;
+                      width: 100%; border-radius: 0px;color: #000;font-size: 1.2rem;font-weight: 800;background: linear-gradient(40deg, #F9C835 20%, #f9c935 51%, #F9C835 90%);border: none;"
+                class="resend-linkm btn btn-primary" type="button">
+                Login
+              </button>
+            </div>
+
+          </div>
+          <p class="p-hide-bottom" style="text-align: center; font-weight: 500;font-size: .9rem;color: grey;">By
+            Continuing, I agree to
+            the <a href="./Terms.html" style="color: #0d6efd !important;"> Term & conditions</a></p>
+          <div style="display:flex; justify-content:center;">
+            <button
+              style="width: 90%; border-radius: 0px;color: #000;font-size: 1.2rem;font-weight: 800;background: linear-gradient(40deg, #F9C835 20%, #f9c935 51%, #F9C835 90%);border: none;"
+              class="continue-sm otpM-B btn btn-primary otpContinueBtn" type="button">
+              CONTINUE
+            </button>
+
+          </div>
+          <div onclick="handleSwitchMobile1()"
+            style="text-align: center; font-weight: 500;font-size: .9rem;color: grey;margin-top:15px;">Login with
+            Password</div>
+        </form>
+
+        <script>
+          function handleSwitchMobile1() {
+            document.querySelector('.sign-form-mobile-otp').classList.add("d-none");
+            document.querySelector('.sign-form-mobile-password').classList.remove("d-none");
+          }
+          function handleSwitchMobile2() {
+            document.querySelector('.sign-form-mobile-password').classList.add("d-none");
+            document.querySelector('.sign-form-mobile-otp').classList.remove("d-none");
+          }
+        </script>
+        <form class="mt-3 sign-form-mobile sign-form-mobile-password d-none">
+          <div class="mb-3 mobile-form">
+            <div style="margin-top:30px;" for="Email" class="form-label"><span
+                style="font-size: 1.4rem;font-weight:800;">Login </span> &nbsp;or &nbsp; <span
+                style="font-size: 1.2rem;font-weight:800;">Signup</span></div>
+            <input style="margin-top:15px;border:3px solid rgb(201, 201, 201)" type="number"
+              class="form-control sign-input-sm-num" placeholder="Enter Your Mobile No" />
+            <input style="margin-top:15px;border:3px solid rgb(201, 201, 201)" type="password"
+              class="form-control sign-input-sm-pass" placeholder="Enter password here..." />
+          </div>
+          <p style="text-align: center; font-weight: 500;font-size: .9rem;color: grey;">By Continuing, I agree to
+            the <a href="./Terms.html" style="color: #0d6efd !important;"> Term & conditions</a></p>
+          <div style="display:flex; justify-content:center;">
+            <button id="loginMob"
+              style="width: 100%; border-radius: 0px;color: #000;font-size: 1.2rem;font-weight: 800;background: linear-gradient(40deg, #F9C835 20%, #f9c935 51%, #F9C835 90%);border: none;"
+              class="loginMob continue-sm-password btn btn-primary" type="button">
+              Login
+            </button>
+
+          </div>
+          <div onclick="handleSwitchMobile2()"
+            style="text-align: center; font-weight: 500;font-size: .9rem;color: grey;margin-top:15px;">Login with
+            OTP</div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- End Profile Side PopUp without login-->
+
+  <!-- Profile Side PopUp without login with login-->
+  <div id="profile-side-pop-login" class="profile-side-pop">
+    <div onclick="openProfileLogin()"
+      style="border-bottom: 1px solid #ddd;padding: 7px;padding-left: 14px;font-weight: 600;">
+      <i class="fa-solid fa-arrow-left-long"></i> &nbsp; My Account
+    </div>
+    <div>
+      <div style="border-bottom: 1px solid #dddd;">
+        <div style="width: 90%;margin: 8px auto;display: flex;">
+          <div id="p-name-logo" class="side-profile-user-name" style="text-align: center; display: inline-block; background-color: #F9C835; padding: 16px;border-radius: 50%;width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;font-size: 1.6rem;font-weight: 600;">PS
+            <!-- <span style="vertical-align: middle;width: 100%;height: 100%;font-size: 1.6rem;font-weight: 600;">PS</span> -->
+          </div>
+          <div style="display: inline-block;vertical-align:middle;margin-left: 2rem; margin-top: 10px;
+          width: 60%;
+          line-height: 17px;">
+            <div id="p-name" style="font-size: 1.4rem;">Pankaj Setia</div>
+            <div id="p-email" style="font-size: 0.8rem;">pankajsetia007@gmail.com</div>
+            <div id="p-phone" style="font-size: 1rem;">9530000007</div>
+          </div>
+        </div>
+      </div>
+      <div onclick="window.location='./orderHistory.html'" style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;width: 10%;vertical-align: middle;">
+            <!-- <img style="vertical-align: middle;width: 80%;vertical-align: middle;" alt="" src="./Assets/open-box.png"> -->
+            <i class="fa-light fa-box-open" style="font-size: 1.6rem;margin: auto 4px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+            <div style="font-size: 1.3rem;">My Orders</div>
+            <div style="font-size: .7rem;color:grey;">Check your order</div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #dddd">
+        <div onclick="openNotification()" style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;width: 10%;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/bell-icon.png"> -->
+            <i class="fa-light fa-bell" style="font-size: 1.7rem;margin: auto 7px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.3rem;">Notification <img style="width: 34px;position:absolute;top:0;" alt=""
+                src="./Assets/New-png.png"></div>
+            <div style="font-size: .7rem;color:grey;">Your order Updates</div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #dddd;">
+        <a style="color: #000;" href="tel:9557953242">
+          <div style="position: relative; width: 95%;margin: 8px auto;">
+            <div style="display: inline-block;width: 10%;vertical-align: middle;">
+              <img style="width: 86%;vertical-align: middle;margin: auto 2px;" alt=""
+                src="./Assets/All-Support-icon.svg">
+            </div>
+            <div style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+
+              <div style="font-size: 1.3rem;">Customer Care</div>
+              <div style="font-size: .7rem;color:grey;">Call or Whatsapp</div>
+            </div>
+            <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="shareButton" style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;width: 10%;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/gift-icon.png"> -->
+            <i class="fa-light fa-gift" style="font-size: 1.7rem;margin: auto 5px;"></i>
+          </div>
+          <div style="display: inline-block;margin-left: 5px;vertical-align: middle;position: relative;">
+            <div style="font-size: 1.3rem;">Invite Friends & Win <img style="width: 34px;position:absolute;" alt=""
+                src="./Assets/New-png.png"></div>
+
+            <div style="font-size: .7rem;color:grey;position: relative;">Share link to Friend & win a chance to Free
+              VIP Number &nbsp;<img style="top: 4px; width: .6rem;position:absolute;vertical-align: middle;" alt=""
+                src="./Assets/share-icon1.png"></div>
+          </div>
+          <div style="position:absolute; top:22%;right:10px;font-weight:600;font-size: 1.4rem;">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;width: 10%;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/edit-user.png"> -->
+            <i class="fa-light fa-circle-user" style="font-size: 1.7rem;margin: auto 5px;"></i>
+          </div>
+          <div onclick="{window.location = 'profile.html'}"
+            style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+            <div style="font-size: 1.3rem;">Edit Profile</div>
+            <div style="font-size: .7rem;color:grey;">Check Your detail</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-bottom: 1px solid #dddd;">
+        <div style="position: relative; width: 95%;margin: 8px auto;">
+          <div style="display: inline-block;width: 10%;vertical-align: middle;">
+            <!-- <img style="width: 80%;vertical-align: middle;" alt="" src="./Assets/open-lock.png"> -->
+            <i class="fa-light fa-unlock" style="font-size: 1.7rem;margin: auto 5px;"></i>
+          </div>
+          <div onclick="{window.location = 'password.html'}"
+            style="display: inline-block;margin-left: 5px;vertical-align: middle;">
+            <div style="font-size: 1.3rem;">Change Password</div>
+            <div style="font-size: .7rem;color:grey;">Login Password change</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="fixed-button-width" style="position:absolute;bottom:20px;">
+        <div class="logout-bottom"
+          style="text-align: center; font-weight: 500;font-size: .9rem;color: grey;margin-top:2.5rem;">Logout</div>
+        <div style="text-align: center;margin-top:.8rem;">
+          <!-- <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/insta-icon.png">
+          <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/fb-icon.png">
+          <img style="width: 20px;margin: auto 5px;" alt="" src="./Assets/twitter-icon.png">
+          <img style="width: 20px;height:20px;margin: auto 5px;" alt="" src="./Assets/yt-icon.png"> -->
+          <i class="fa-brands fa-instagram" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-facebook" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-square-twitter" style="font-size: 1.4rem;margin: auto 5px;"></i>
+          <i class="fa-brands fa-youtube" style="font-size: 1.4rem;margin: auto 5px;"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Profile Side PopUp with login -->
+
+  <!-- Support Sub Option -->
+  <div onmouseover="openSubOpthion(false)" onmouseleave="openSubOpthion1()" class="" style="position: relative;">
+    <div id="sub-option-div" class="sub-option-div">
+      <div class="sub-support-icon">
+        <div><a style="color: #000;" target="_blank" href="https://wa.me/+919557953242/?text=Welcome"><i
+              class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i><br>whatsapp</a></div>
+        <div><a style="color: #000;" href="tel:9557953242"><i class="fa-solid fa-phone-volume"
+              style="font-size: 1.3rem;"></i><br>call</a></div>
+        <div><i class="fa-solid fa-headset" style="font-size: 1.3rem;"></i><br>Live chat</div>
+      </div>
+    </div>
+  </div>
+  <!-- Support Sub Option End -->
+
+  <script>
+    $(".inputs").keyup(function () {
+      if (String(this.value).length == this.maxLength) {
+        var $next = $(this).next('.inputs');
+        if (String($next).length)
+          $(this).next('.inputs').focus();
+        else
+          $(this).blur();
+      }
+    });
+    $(".inputs").keyup(function () {
+      if (String(this.value).length === 0) {
+        var $prev = $(this).prev('.inputs');
+        if (String($prev).length)
+          $(this).prev('.inputs').focus();
+        else
+          $(this).blur();
+      }
+    });
+  </script>
+
+  <script type="module">
+    import config from "./conf/index.js";
+    let continueSm = document.querySelector(".continue-sm");
+    let inputNumber = document.querySelector(".sign-input-sm");
+    let otpForm = document.querySelector(".form-otp");
+    let loginOTPM = document.querySelector(".resend-linkm");
+    let otpContinueBtn = document.querySelector(".otpContinueBtn");
+    let pHideB = document.querySelector(".p-hide-bottom");
+
+
+    async function otpLogin(num, otp) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/customer_login`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              customer_no: `${num}`,
+              OTP: `${otp}`,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    loginOTPM.addEventListener("click", async function () {
+      let otp1 = document.querySelector("#otp1M").value;
+      let otp2 = document.querySelector("#otp2M").value;
+      let otp3 = document.querySelector("#otp3M").value;
+      let otp4 = document.querySelector("#otp4M").value;
+      let num = document.querySelector(".sign-input-sm").value;
+      let otp = Number(`${otp1}${otp2}${otp3}${otp4}`)
+      console.log(num, otp);
+      try {
+        let data = await otpLogin(num, otp);
+        if (data.status === "success") {
+          const user = await fetch(
+            config.backendEndpoint + `/customer_info`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                token: `${data.token}`,
+              },
+            }
+          );
+          let userData = await user.json();
+
+          if (userData.status === "success") {
+            localStorage.setItem("user", userData.data.token);
+            Toastify({
+              text: "Logged In Successfully",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "#32cd32",
+              },
+            }).showToast();
+            setTimeout(function () {
+              if (params.get("checkout")) {
+                window.location = "./Checkout.html?buynow=true";
+              } else location.reload();
+            }, 500);
+          }
+        } else {
+          Toastify({
+            text: "Unable to login",
+            duration: 2500,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
+    let registeredNumbermob = document.querySelector(".registered-Numbermob");
+    continueSm.addEventListener("click", function () {
+      let num = document.querySelector(".sign-input-sm").value.length;
+      if (num < 10 || num > 10) {
+        Toastify({
+          text: "Invalid Number",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+      } else {
+        loginOTPBottom()
+        otpForm.classList.remove("d-none");
+        otpContinueBtn.classList.add("d-none");
+        pHideB.classList.add("d-none");
+        registeredNumbermob.innerHTML = `+91-` + inputNumber.value;
+      }
+    });
+
+
+
+    let loginMob = document.querySelector('.loginMob');
+
+    async function customerLogin(num, password) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/customer_login`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              customer_no: `${num}`,
+              password: `${password}`,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+        console.log("aj");
+      }
+    }
+    loginMob.addEventListener("click", async function () {
+
+      let password = document.querySelector(".sign-input-sm-pass").value;
+      console.log(password);
+      let num = document.querySelector(".sign-input-sm-num").value;
+      let numLen = document.querySelector(".sign-input-sm-num").value.length;
+      if (numLen < 10 || numLen > 10) {
+        Toastify({
+          text: "Invalid Number",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+      } else {
+
+        try {
+          let data = await customerLogin(num, password);
+
+          if (data.status === "success") {
+            const user = await fetch(
+              config.backendEndpoint + `/customer_info`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-type": "application/json; charset=UTF-8",
+                  token: `${data.token}`,
+                },
+              }
+            );
+            let userData = await user.json();
+
+            if (userData.status === "success") {
+              localStorage.setItem("user", userData.data.token);
+              Toastify({
+                text: "Logged In Successfully",
+                duration: 2500,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "#32cd32",
+                },
+              }).showToast();
+              setTimeout(function () {
+                if (params.get("checkout")) {
+                  window.location = "./Checkout.html?buynow=true";
+                } else location.reload();
+              }, 500);
+            }
+          } else if (data.msg == "Customer does not exists!") {
+            Toastify({
+              text: "User doesn't exist!",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "red",
+              },
+            }).showToast();
+            localStorage.setItem("notRegisterNumber", num);
+            setTimeout(() => {
+              window.location = "Register.html";
+            }, 2000);
+          } else {
+            Toastify({
+              text: "Unable to login",
+              duration: 2500,
+              newWindow: true,
+              close: true,
+              gravity: "top", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "red",
+              },
+            }).showToast();
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    });
+
+
+    // login with otp
+    async function loginOTPBottom() {
+      let num = document.querySelector(".sign-input-sm").value;
+      const res = await sendOTP(num);
+      if (res.status === "success" && num.length > 0) {
+        Toastify({
+          text: "OTP SENT ",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#32cd32",
+          },
+        }).showToast();
+        registeredNumbermob.innerText = "+91-" + num;
+        // otpM.innerText = "Resend OTP";
+        // mobileform.classList.add("d-none");
+        // MobileForm.classList.add("d-none");
+        // otpScreenMobile.classList.remove("d-none");
+        // otpScreenMobile.classList.add("d-block");
+        // loginScreenM.classList.add("d-none");
+      } else {
+        Toastify({
+          text: "User doesn't exist!",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+        }).showToast();
+        localStorage.setItem("notRegisterNumber", num);
+        setTimeout(() => {
+          window.location = "Register.html";
+        }, 2000);
+      }
+    }
+
+    async function sendOTP(num) {
+      try {
+        const response = await fetch(
+          config.backendEndpoint + `/send_otp?customer=${num}`,
+          {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            redirect: "follow",
+            referrerPolicy: "no-referrer",
+          }
+        );
+        return response.json();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+  </script>
+
+  <script type="module">
+    import config from "./conf/index.js";
+    // Fetch All Category
+    async function fetcDataCategory() {
+      let categorgy = document.querySelector(".category-page-pop-up-style");
+      const response = await fetch(
+        config.backendEndpoint + "/fetch_all_categories"
+      );
+      const data = await response.json();
+      let CategoryData = data.data;
+      let html = `<div style="border-bottom: 1px solid #efefef;padding: 5px 8px;font-weight: 500;font-size:1rem;"><input
+              class="category FilterCategories" name="categorySelected" type="radio">&nbsp;&nbsp; WITHOUT 2,4 & 8 &nbsp;&nbsp;&nbsp;<span style="padding:0px 5px;font-size:0.8rem;color: #fff;border-radius: 6px;background: linear-gradient(90deg, #f7aa04, #ffcd00);">Popular</span></div>`;
+      CategoryData.forEach((element) => {
+        let status = checkSelectedCategory(element.category_id)
+        if (status) {
+          html += `<div id="${element.category_id}" style="border-bottom: 1px solid #efefef;padding: 5px 8px;font-weight: 500;font-size:1rem;"><input
+              class="category FilterCategories category-${element.category_id}" onchange="CheckPage(this.value) + CategoryMobile(this.value)" name="categorySelected" value=${element.category_id} type="radio" id="id-${element.category_id}" checked>&nbsp;&nbsp;<label for="id-${element.category_id}"> ${element.category_name}</label></div>`
+        } else {
+          html += `<div id="${element.category_id}" style="border-bottom: 1px solid #efefef;padding: 5px 8px;font-weight: 500;font-size:1rem;"><input
+                class="category FilterCategories category-${element.category_id}" onchange="CheckPage(this.value) + CategoryMobile(this.value)" name="categorySelected" value=${element.category_id} type="radio" id="id-${element.category_id}">&nbsp;&nbsp;<label for="id-${element.category_id}"> ${element.category_name}</label></div>`
+        }
+      });
+      categorgy.innerHTML = html;
+    };
+    fetcDataCategory();
+  </script>
+
+  <script>
+    let logoutB = document.querySelector(".logout-bottom");
+    let loginProfile = document.querySelector("#profile-side-pop-login");
+    let defaultProfile = document.querySelector(".profile-side-pop");
+    function openLoginBottom() {
+      let val = localStorage.getItem("user");
+      if (val) {
+        loginProfile.classList.remove("hide")
+        loginProfile.classList.add("profile-active")
+      } else {
+        defaultProfile.classList.remove("hide")
+        defaultProfile.classList.add("profile-active")
+      }
+    }
+    logoutB.addEventListener("click", () => {
+      localStorage.removeItem('user');
+      location.reload();
+    });
+
+
+    let customer_no;
+    // let ifMob = screen.width > 700 ? "" : "Mob";
+
+    var myHeaders = new Headers();
+    myHeaders.append("token", localStorage.getItem("user"));
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+    function getUserInfo() {
+      fetch(
+        "https://vipnumberapi.bigboychoice.com/api/v1/customer/customer_info",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.status == "success") {
+            document.getElementById("p-name").innerHTML =
+              result.data.customer_name;
+            if (result.data.customer_name.split(" ")[1]) {
+              document.getElementById("p-name-logo").innerHTML =
+                result.data.customer_name[0] + result.data.customer_name.split(" ")[1][0];
+            } else {
+              document.getElementById("p-name-logo").innerHTML =
+                result.data.customer_name[0];
+            }
+            document.getElementById("p-email").innerHTML =
+              result.data.email;
+            document.getElementById("p-phone").innerHTML =
+              result.data.customer_no;
+            customer_no = result.data.customer_no;
+          } else {
+            localStorage.removeItem("user");
+            // window.location = "/";
+          }
+        })
+        .catch((error) => console.log("error", error));
+    }
+    getUserInfo();
+  </script>
+
+  <script>
+    // This Function check store page or not
+    function CheckPage(value) {
+      localStorage.setItem("selectedCategory", value);
+      if ((window.location.href).split('.com')[1] != "/vipNumber.html") {
+        document.querySelector('.overflow_screen-custom').style.display = "block";
+        localStorage.setItem("selectedCategory", value);
+        window.location = "vipNumber.html";
+      }
+      // if (window.location.href !== "https://localhost/vipnumberstore-frontend/vipNumber.html") {
+      // document.querySelector('.overflow_screen-custom').style.display = "block";
+      //   localStorage.setItem("selectedCategory", value);
+      //   window.location = "vipNumber.html";
+      // }
+    }
+    // This Function check selected category or not
+    function checkSelectedCategory(value) {
+      let item = localStorage.getItem("selectedCategory", value);
+      if (item) {
+        if (value == item) {
+
+          return true
+        }
+        return false
+      }
+      return false
+    }
+
+
+    function openSubOpthion(sound) {
+      let subPop = document.querySelector(".sub-option-div");
+      if (subPop.classList[1] === "active") {
+        subPop.classList.remove("active");
+      } else {
+        if (sound) {
+          play()
+        }
+        subPop.classList.add("active");
+      }
+    }
+    function openSubOpthion1() {
+      let subPop = document.querySelector(".sub-option-div");
+      subPop.classList.remove("active");
+    }
+
+    // Share Website
+    let shareButton = document.querySelector('.shareButton')
+    let shareButton1 = document.querySelector('.shareButton1')
+    shareButton.addEventListener('click', shareFun);
+    shareButton1.addEventListener('click', shareFun);
+    function shareFun() {
+      if (navigator.share) {
+        navigator.share({
+          title: `India's most trusted & 100% Genuine. vip numbers store`,
+          url: 'https://test.bigboychoice.com/'
+        }).then(() => {
+          console.log('Thanks for sharing!');
+        })
+          .catch(console.error);
+      }
+    }
+
+
+    function openCategoryPage() {
+      let categoryPage = document.querySelector(".category-page-pop-up");
+      let btn = document.querySelector(".category-btn");
+      if (categoryPage.classList[1] === "active") {
+        categoryPage.classList.remove("active");
+        categoryPage.classList.add("hide");
+        btn.classList.remove("active");
+      } else {
+        categoryPage.classList.add("active");
+        categoryPage.classList.remove("hide");
+        btn.classList.add("active");
+      }
+    }
+
+    function loginBottomPopUp() {
+      let loginPop = document.querySelector(".login-bottom-popup");
+      let bgBlur = document.querySelector(".bg-blur");
+      if (loginPop.classList[1] === "active") {
+        loginPop.classList.remove("active");
+        loginPop.classList.add("hide");
+        // bgBlur.style.filter =  "none";
+        bgBlur.style.background =  "#fff";
+        bgBlur.style.opacity =  "1";
+        bgBlur.style.pointerEvents =  "auto";
+      } else {
+        loginPop.classList.add("active");
+        loginPop.classList.remove("hide");
+        // bgBlur.style.filter =  "blur(1px)";
+        bgBlur.style.background =  "#b2b2b08c";
+        bgBlur.style.opacity =  "0.9";
+        bgBlur.style.pointerEvents =  "none";
+      }
+    }
+
+    function openProfile() {
+      let loginPop = document.querySelector(".login-bottom-popup");
+      let profileOpen = document.querySelector(".profile-side-pop");
+      if (profileOpen.classList[1] === "profile-active") {
+        profileOpen.classList.remove("profile-active")
+        profileOpen.classList.add("hide")
+        loginPop.classList.remove("active");
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+      } else {
+        profileOpen.classList.add("profile-active")
+        profileOpen.classList.remove("hide")
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = 'fixed';
+      }
+    }
+    function openProfileLogin() {
+      let loginPop = document.querySelector(".login-bottom-popup");
+      let profileOpen = document.querySelector("#profile-side-pop-login");
+      if (profileOpen.classList[1] === "profile-active") {
+        profileOpen.classList.remove("profile-active")
+        profileOpen.classList.add("hide");
+        loginPop.classList.remove("active");
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+      } else {
+        profileOpen.classList.add("profile-active")
+        profileOpen.classList.remove("hide")
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = 'fixed';
+      }
+    }
+  </script>
+
+</body>
+
+</html>
